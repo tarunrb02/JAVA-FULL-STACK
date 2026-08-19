@@ -1,0 +1,16 @@
+package Single_Level;
+
+public class Car extends Vehicle {
+	int price;
+	public static void main(String[] args) {
+		Car c=new Car();
+		c.brand="benz";
+		c.color="black";
+		c.weels=4;
+		c.price=8000000;
+		
+		c.start();
+		System.out.println("Car Brand is "+c.brand+" and color and price is "+c.color+" and "+c.price+" having weels "+c.weels);
+		c.stop();
+	}
+}

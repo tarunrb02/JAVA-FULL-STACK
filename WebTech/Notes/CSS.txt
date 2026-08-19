@@ -1,0 +1,310 @@
+CSS - Cascading Style Sheet				roll no: 23
+------------------------------------------------------------------------------
+
++ it is a lng that is used to describe the style of a document.
++ (property: value) pair
+
+Basic Syntax:
+selector{
+	property: value;
+}
+
+Ways of Including Style:
+-----------------------
+
++ inline CSS: where we write Style inside HTML tags/elements as style attribute
+	<h1 style="color: blue; text-align: center;">Welcome to Level 1 CSS</h1>
+	<tag style=" property1: value1; property2: value2; ....." > Content </tag>
+
++ internal CSS: where we write Style inside <style> </style> tag we can include style tag inside head or inside body
+	<style>
+        h1 {
+            font-family: Arial, sans-serif;
+            color: blue; 
+            text-align: center;
+        }
+    	</style>
+
++ external CSS: Writing CSS in separate file(style.css) and linking with HTML file(index.html)
+	selector{
+	property1: value1;
+	property2: value2;
+	}
+Note: inline Style got higher priority.
+	+ In external CSS if we styled a element with same property multiple time last property: value will apply
+
+-------------------------------------------------------------------------------------------
+
++ Color Property: used to set the color of four ground.
+	color: red;
++ background color: used to set the color of background.
+	background-color: red;
+
+Color Systems
+
++ RGB (Red, Green, Blue) (0-255, 0-255, 0-255)
+	color: rgb(255,0,0); =>red
+	color: rgb(0,255,0); =>green
+
++ Hex(Hexadecimal) (#Red  Green Blue) 
+		  (#00-ff 00-ff 00-ff)
+	color:#ff0000; =>red
+	color:#00ff00; =>green
+
++ Alpha Channel (RGBA): opacity (0 to 1)
+	color: RGBA(255,0,0,0.2);
+	color: RGBA(0,255,0,0.4);
+
+----------------------------------------------------------------------------------------------------
+
+Selectors
+---------
++ universal selector: *{ property: value; }
+	*{
+   	margin: 0;
+    	padding: 0;
+	}
+
++ element selector: element{ property: value; }
+	h1{
+ 	   color: red;
+	}
+
++ id selector: #id{ property: value; }
+	#id3{
+	    color: yellow;
+	}
+
++ class selector: .class{ property: value; }
+	.myclass{
+	    color: purple;
+	}
+
++ group selector: selector1,selector2, ...{ property: value; }
+	#id1,#id2,#id3{
+	    color: yellow;
+	}
+----------------------------------------------------------------------------------------
+
+Text property:
+	+ text-align: left/right/center
+	+ text-decoration: underline/line-through/overline/none
+	+ font-weight: normal/bold/bolder  or 100-900 (400=bold)
+	+ font-family: (font style) Times new Roman,arial ..etc
+	+ font-size: px / em / rem 
+	+ line-height: (line spacing)
+	+ text-transform: uppercase/lowercase/capitalize/none
+	+ text-shadow: hr vr br color;  (hr- horizontal ratio, vr- vertical ratio, br- blur ratio)
+
+Units in CSS
+	+ Absolute units: pixel(px) 1 inch = 96px
+
+Relative unites in CSS:
+
+	+ Percentage(%): It is often used to define a size as relative to an element's parent object
+	ex: width:33%;
+	    margin-left:50%;
+
+	+ em : font size of the parent, in the case of typographical properties like front-size
+		and font size of the element itself, in case of other properties like width
+
+	+ rem(Root em):Font size of the root element (by default font size of body content is 16px)
+
+	+ vh: relative to 1% of viewport height
+
+	+ vw: relative to 1% of viewport width
+
+----------------------------------------------------------------------------------------
+				BOX MODEL
+-----------------------------------------------------------------------------------------
++ Height: by default, it sets the content area height of the element
+	div{
+	    height: 50px;
+	    background-color: rgb(240, 240, 0);
+	}
+
++ Width: by default, it sets the content area Width of the element
+	div{
+	    Width: 50px;
+	    background-color: rgb(240, 240, 0);
+	}
+
++ Border: used to set an element's border.
+	div{
+	    border-width: 2px;
+	    border-style: solid;
+	    border-color: black;
+	}
+	border: 3px solid black;  // shorthand
+	border-radius: 10px/50%
+
++ Padding: space b/w content and border
+	padding-left:10px;
+	padding-top:20px;
+	padding-right:10px;
+	padding-bottom:20px;
+	
+	padding:50px; //shorthand
+	padding: top right bottom left; -> clockwise  padding: 10px 20px 10px 20px
+
++ Margin: space out side the border and space b/w 2 elements
+	Margin-left:10px;
+	Margin-top:20px;
+	Margin-right:10px;
+	Margin-bottom:20px;
+	
+	Margin:50px; //shorthand
+	Margin: top right bottom left; -> clockwise  Margin: 10px 20px 10px 20px
+
++ box-sizing: box size will be fixed it will not increase when we give padding
+	box-sizing: border-box;
+
++ overflow: text content overflow from container
+	overflow: auto/hidden/scroll;
+
++ Display Property:
+	display: inline/block/inline-block/none/flex
+
+	+ inline: Takes only the space required by the element (size of the content).(no margin/padding)
+	+ block: takes full space available in width.
+	+ inline-block: Similar to inline but we can set margin and padding
+	+ none: to remove element from document flow. (space for the element is not reserved)
+
++ visibility Property:
+	visibility: hidden
+
+Note: when visibility is to hidden, space for the element is reserved but if display is set to none, space for the element is not reserved
+
+--------------------------------------------------------------------------------------------------------
+
++ Position: the position CSS property sets how an element is positioned in a document. how it behave with respected to scrolling , stacking 
+	position: static/relative/absolute/fixed
+
+	+ static: by default position (the top, right, left, bottom and z-index properties have no effect)
+	+ relative: element is relative to itself.(the top, right, left, bottom and z-index properties will work)
+	+ absolute: position relative to its closest positioned ancestor(non static) 
+	+ fixed: position relative to browser (it will not scroll)/ locks an element to the screen so it never moves
+	+ sticky: positioned based on use﻿r's scroll position /  lets an element scroll normally at first, but locks it in place once it hits a specific edge.
+
+	+ z-index: only work with position
+
++ background Image
+	background-image: url(download.jpeg);
+    	background-repeat: no-repeat;
+    	background-size: cover/contain/auto;
+
++ Flex Box: It is a one-dimensional layout method for arranging items in rows or columns.
+
++ The Flex Model:
+	flex container
+	flex item
+	main axis
+	cross axis
+
++ Flexbox Direction: It sets how flex items are placed in the flex container, along which axis and direction.
+	flex-direction : row; (default)
+	flex-direction : row-reverse;
+	flex-direction : column;
+	flex-direction : column-reverse;
+
++ Flex Properties (for Flex Container)
+	justify-content : alignment along the main axis.
+	flex-start / flex-end / centre / space-evenly /
+	flex-wrap : no wrap / wrap / wrap-reverse
+	align-items : alignment along the cross axis.
+	align-content : alignment of space between & around the content along cross-axis
+
++ Flex Properties (for Flex Item)
+	align-self : alignment of individual along the cross axis.
+	flex-grow : how much a flex item will grow relative to the rest of the flex items if space is available
+	flex-shrink : how much a flex item will shrink relative to the rest of the flex items if space is available
+
++ Media Queries:a core feature of web design that allow you to apply different styles based on a device's characteristics, such as viewport width, orientation, or user preferences.
+
+	@media(width: _ px){
+		style
+	}
+
+	@media(min-width: _ px)(max-width: _ px){
+		div{
+		    style
+		}
+	}
+
+--------------------------------------------------------------------------------------------------------
+
++ pseudo class: it use to style the state of the element
+
+	+ div: hover{     //(mouse hover)
+		style
+	    } 
+	+ div: active{    //(only on mouse click)
+		style
+	  }
+	+ div: focus{     //(on mouse click stay for a long)
+		style
+	    } 
+	+ div: visited{    //(to mark visited)
+		style
+	  }
+
++ Transitions: transitions enables you to define the transition between two states of an element
+
+	transition-property: property you want to transition (all, font-size, width, transform etc)
+	transition-duration: 2ms/4ms...
+	transition-timing-function: ease-in/ease-out/linear/steps..
+	transition-delay: 2s/4ms..
+
+	transition shorthand
+		property | duration | timing-function | delay
+
+CSS Transform: Used to apply 2D & 3D transformations to an element
++ rotate
+	transform: rotate(45deg)
+
++ scale: to change the size of element
+	transform: scale(2);
+	transform: scale(0.5);
+	transform: scale(1, 2);
+
+	x & y axis separately:
+	transform: scaleX(0.5);
+	transform: scaleY(0.5);
+
++ translate: to move a element in 2D plane
+	transform: translate(20px);
+	transform: translateX(20px);
+	transform: translateY(20px);
+	transform: translate(20px, 50px);
+
++ skew: to skew the element
+	transform: skew (30deg);
+
+
++ Animation: To animate CSS elements
+
+	@keyframe myName {
+	from { font-size : 20px; }
+	to { font-size : 40px; }
+	}
+
++ Animation Properties:
+	animation-name:
+	animation-duration:
+	animation-timing-function:
+	animation-delay:
+	animation-iteration-count:
+	animation-direction:
+
++ Animation Shorthand
+		animation-name | duration | timing-function | delay | iteration | direction
+	animation : myName 2s linear 3s infinite normal
+
++ % in Animation
+	@keyframe myName {
+	0% { font-size : 20px; }
+	50% { font-size : 30px; }
+	100% { font-size : 40px; }
+	}
+
+

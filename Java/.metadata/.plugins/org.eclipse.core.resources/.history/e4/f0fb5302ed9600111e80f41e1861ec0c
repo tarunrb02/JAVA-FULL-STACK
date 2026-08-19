@@ -1,0 +1,32 @@
+package Encapsulation;
+
+public class Atm_2 {
+	private long accountNo;
+	private int pin;
+	private int balance;
+	
+	public void setter(long accountNo, int pin, int balance) {
+		this.accountNo= accountNo;
+		this.pin= pin;
+		
+		if(balance>=0)
+			this.balance=balance;
+	}
+	
+	public int getBalance() {
+		return balance;
+	}
+	
+	public int getPin() {
+		return pin;
+	}
+	
+//	int countDig(long a) {
+//		int count=0;
+//		while(a>0) {
+//			a=a/10;
+//			count++;
+//		}
+//		return count;
+//	}
+}

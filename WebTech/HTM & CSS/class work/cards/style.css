@@ -1,0 +1,126 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: #e1e0e0;
+}
+body H1{
+    z-index: -1;
+}
+body P{
+    z-index: -1;
+    font-size: 30px;
+    text-align: center;
+}
+.inconsolata-para1 {
+  font-family: "Inconsolata", monospace;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+  font-variation-settings:"width" 100;
+}
+header{
+    height: 60px;
+    width: 100%;
+    background-color: #746e6e;
+    /* position: fixed; */
+    position: sticky;
+    text-align: center;
+    color: #333;
+    top: 0;
+    left: 0;
+    /* right: 0; */
+}
+
+nav{
+    height: 40px;
+    width: 100%;
+    background-color: #dceba2;
+    position: sticky;
+    text-align: center;
+    top: 60px;
+    left: 0;
+}
+nav ul{
+    list-style: none;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    color: black;
+    text-decoration: none;
+    height: 100%;
+}
+
+li a{
+    color: black;
+    text-decoration: none;
+}
+img{
+
+    position: relative;
+    z-index: -1;
+    margin: 20px;
+    /* top: 100px; */
+}
+
+footer{
+    height: 80px;
+    width: 100%;
+    background-color: #746e6e;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    position: sticky;
+    bottom: 0;
+    left: 0;
+
+}
+
+.fa-brands{
+    margin: 0 10px;
+    cursor: pointer;
+    font-size: 30px;
+}
+
+/* .fa-square-linkedin{
+    color: #0077b5;
+}
+.fa-facebook-f{
+    color: #1877f2;
+}
+.fa-whatsapp{
+    color: #25d366;
+}
+.fa-instagram{
+    color: #e1306c;
+}
+.fa-twitter{
+    color: #1da1f2;
+} */
+
+@media screen and (max-width: 768px) {
+    body{
+        flex-direction: column;
+        
+    }
+    nav{
+        height: auto;
+    }
+    nav ul{
+        flex-direction: column;
+    }
+    body p{
+        font-size: 15px;
+    }
+    img{
+        width: 100%;
+        height: auto;
+    }
+}

@@ -1,0 +1,11 @@
+package Encapsulation;
+
+public class Driver {
+	static int money;
+	static Atm a= new Atm();
+	public static void main(String[] args) {
+		money=a.withdraw();
+		a.diposit(10000);
+			System.out.println();
+	}
+}

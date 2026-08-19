@@ -1,0 +1,14 @@
+package Encapsulation;
+
+public class Atm {
+	private int money;
+	
+	public void diposit(int money) {
+		this.money=money;
+	}
+	
+	public int withdraw() {
+		return money;
+	}
+
+}

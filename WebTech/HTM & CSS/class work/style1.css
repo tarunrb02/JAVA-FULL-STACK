@@ -1,0 +1,53 @@
+/* h1,h2{
+    color: red;
+    background-color: blue;
+    text-align: center;
+}
+body{
+    background-image: url(download.jpeg);
+    background-repeat: no-repeat;
+    background-size: cover; //image will cover the whole page
+    background-attachment: fixed; //imgae will not move when scrolling
+    background-position: center; //image will be in center of the page
+    background-im
+} */
+
+/* p{
+    color: azure;
+    background-color:black;
+    letter-spacing: 2px;
+    word-spacing: 3px;
+    text-align:justify;
+    text-decoration:underline;
+    /* font-style: italic;
+    font-size: large;
+    font-family: 'Times New Roman', Times, serif;
+} 
+*/
+
+*{
+    margin: 0;
+    padding: 0;
+}
+
+/* h1,p{
+    background-color: brown;
+    height: 400px;
+    width: 400px;
+    margin: 20px;
+    padding: 50px;
+    border: 5px solid black;
+    border-right: 5px dashed yellow;
+    border-left: 5px dotted blue;
+    border-bottom: 5px solid green;
+    border-top: 5px double black;
+} */
+
+h1{
+    background-color: blueviolet;
+    border: 2px solid black;
+    width: 300px;
+    padding: 10px 20px 5px 30px;
+    margin: 20px 30px 10px 20px;
+}
+

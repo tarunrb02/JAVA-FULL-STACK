@@ -1,0 +1,40 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family:'Times New Roman', Times, serif;
+}
+h1{
+    color: red;
+    text-align: center;
+    text-transform:capitalize;
+}
+
+p{
+    color: blue;
+}
+#id1,#id2,#id3{
+    color: yellow;
+}
+
+button{
+    background-color: green;
+    color: white;
+}
+
+.myclass{
+    color: red;
+}
+
+body{
+    background-color: rgb(240, 240, 240);
+}
+
+#mydiv{
+    background-color: blue;
+}
+#outer{
+    font-size: 20px;
+}
+#inner{
+    font-size: 15px;
+}

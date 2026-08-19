@@ -1,0 +1,70 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>DOM Understanding</title>
+  </head>
+
+  <body>
+    <h1 id="title">DOM Understanding</h1>
+    <p id="demo">
+      This is a simple example to understand the Document Object Model (DOM).
+    </p>
+    <p class="description">This is a paragraph with a class attribute.</p>
+
+    <ol id="list">
+      <li>Item 1</li>
+      <li>Item 2</li>
+      <li>Item 3</li>
+    </ol>
+
+    <script>
+      // Accessing elements by ID
+      const titleElement = document.getElementById("title");
+      console.log(titleElement.textContent); // Output: DOM Understanding
+      console.log(titleElement.innerHTML); // Output: DOM Understanding
+      console.log(titleElement.innerText); // Output: DOM Understanding
+      console.log(titleElement.outerHTML); // Output: <h1 id="title">DOM Understanding</h1>
+
+      //innerHTML vs innerText vs textContent
+      const demoElement = document.getElementById("demo");
+      console.log(demoElement.innerHTML); // Output: This is a simple example to understand the Document Object Model (DOM).
+      console.log(demoElement.innerText); // Output: This is a simple example to understand the Document Object Model (DOM).
+      console.log(demoElement.textContent); // Output: This is a simple example to understand the Document Object Model (DOM).
+
+      // difference between innerText and textContent and innerHTML is that innerText returns the visible text content of an element, while textContent returns the text content of an element and its descendants, regardless of visibility. innerHTML returns the HTML content of an element, including any child elements.
+      // for example, if an element has a child element that is hidden using CSS, innerText will not include the text content of that child element, while textContent will include it. innerHTML will return the HTML content of the element, including any child elements, regardless of visibility.
+      // difference between innerText and textContent is that innerText takes into account the CSS styles applied to an element, while textContent does not. This means that if an element has a CSS style that hides its text content, innerText will return an empty string, while textContent will still return the text content of the element. innerText also takes into account the line breaks and white space in the text content, while textContent does not. This means that if an element has multiple lines of text with line breaks, innerText will return the text content with line breaks, while textContent will return the text content without line breaks. child elements with HTML tags, while textContent will return only the text content of those child elements. but innerText will return the text content of those child elements, including any HTML tags. This means that if an element has child elements with HTML tags, innerText will return the text content of those child elements, including any HTML tags, while textContent will return only the text content of those child elements, without any HTML tags.
+      // difference between innerHTML and textContent is that innerHTML returns the HTML content of an element, while textContent returns the text content of an element and its descendants, regardless of HTML tags. This means that if an element has child elements with HTML tags, innerHTML will return the HTML content of those child elements, while textContent will return only the text content of those child elements.
+
+      // Accessing elements by class name
+      const descriptionElements =
+        document.getElementsByClassName("description");
+      console.log(descriptionElements[0].textContent); // Output: This is a paragraph with a class attribute.
+
+      // Accessing elements by tag name
+      const listItems = document.getElementsByTagName("li");
+      console.log(listItems.length); // Output: 3
+      console.log(listItems[0].textContent); // Output: Item 1
+      
+      // Accessing elements using querySelector
+      const firstListItem = document.querySelector("li"); //Returns the first matching element.
+      console.log(firstListItem.textContent);
+      
+      //accessing elements using querySelector by ID
+      const listElement = document.querySelector("#list");
+      console.log(listElement.textContent); // Output: Item 1Item 2Item 3
+
+      //accessing elements using querySelector by class
+      const descriptionElement = document.querySelector(".description");
+      console.log(descriptionElement.textContent); // Output: This is a paragraph with a class attribute.
+
+      // Accessing elements using querySelectorAll
+      const allListItems = document.querySelectorAll("li"); //Returns a NodeList of all matching elements.
+      console.log(allListItems.length); // Output: 3
+
+      
+    </script>
+  </body>
+</html>

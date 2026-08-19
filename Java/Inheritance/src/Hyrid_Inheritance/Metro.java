@@ -1,0 +1,18 @@
+package Hyrid_Inheritance;
+
+public class Metro extends Train{
+	String usage;
+	
+	public static void main(String[] args) {
+		Metro m=new Metro();
+		m.brand="BEMEL";
+		m.color="Yellow";
+		m.ModeOfTransport="Metro Track";
+		m.usage="Urban Commute";
+		
+		m.start();
+		System.out.println(m.brand+" "+m.color+" Line Metro Used for "+ m.usage+" Runs on  "+m.ModeOfTransport);
+		m.stop();
+	}
+
+}

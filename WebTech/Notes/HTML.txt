@@ -1,0 +1,395 @@
+structure of HTML
+------------------------------------
++ Hyper Text Markup Language
++ Html tag is parent of head & body tag
++ Most of html elements have opening & closing tags with content in between
++ Some tags have no content in between, eg - <br>
++ HTML is NOT case sensitive
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>First HTML Page</title> // tab name 
+</head>
+
+<body>
+    //content to show on web page
+</body>
+</html>
+
+<p> content </p> paragraph Tag
+
+    <h2>Headings </h2> //Heading Tags
+    -------------------------
+    <h1>Welcome to HTML</h1> 
+    <h2>Welcome to HTML</h2>
+    <h3>Welcome to HTML</h3>
+    <h4>Welcome to HTML</h4>
+    <h5>Welcome to HTML</h5>
+    <h6>Welcome to HTML</h6>
+
+    <hr> //it prints horizontal line
+    <br> // break the line to new line
+
+    <img src="download.jpeg" alt="Not found" > // used to insert image
+
+    <p> H <sub>2</sub>O and X<sup>2</sup> </p> // prints H2O and X^2
+
+
+
+attribute: it give extra information about HTML Tag
+
+-------------------------------------------------------------
+HTML List
+-------------------------------------------------------------
+1. ordered list (ol)
+    <ol type = "  ">  // used to create ordered List
+                    // type =" " attribute is used to change list representation ( 1, A, a, I, i)
+                    // start=" only number " continue with the last start value as num
+        <li>List item 1</li> // use to enter list item
+    </ol>
+
+
+2. Unordered list (ul)
+    <ul type = "  ">  // used to create ordered List
+                    // type =" " attribute is used to change list representation ( disc, circle, square, none)
+        <li>List item 1</li> // use to enter list item
+    </ul>
+
+3. Description list / Definition list(dl)
+    <dl>
+        <dt>HTML</dt>  // Description title( dt) 
+        <dd>HTML is a markup language for describing web documents</dd>   // Description Data (dd)
+
+        <dt>CSS</dt>
+        <dd>CSS is a style sheet language used for describing the presentation of a document written in a markup language</dd>
+    </dl>
+
+-------------------------------------------------------------
+HTML Table
+-------------------------------------------------------------
+structure of Table is
+Table Head ->  <thead> </thead>
+Table body ->  <tbody> </tbody>
+Table foot ->  <tfoot> </tfoot>
+
+    <main>
+        //main tag is used to define the main content of the document. It should be unique and not repeated in the document. The main content should be directly related to the central topic of the document.
+    </main>
+    
+HTML structure
+<table> 
+    <thead> 
+        <tr> //table row
+            <th>    </th> //table head Data
+            <th>    </th>
+        </tr>
+    </thead>
+    <tbody> 
+        <tr>
+            <td>    </td> // table data
+            <td>    </td>
+        </tr>
+    </tbody>
+</table>
+---------or---------
+
+<table> 
+    <tr>
+        <th>    </th>
+        <th>    </th>
+    </tr>
+    
+    <tr>
+        <td>    </td>
+        <td>    </td>
+    </tr>
+</table>
+
+-----------------------------------------------------------------
+
+------anchor Tag-------------------------------------------------
++ inline level element
+	<a href=" path "> content </a>
++ internal heifer link ./intern HTML file path (used to navigate between the HTML pages)
+        <a href="./lists.html">Go toLists</a>
+
++ external heifer link used to navigate between the websites 
+        <a href="https://www.google.com/">Google</a>
+
+Pre Tag: Used to display text as it is (without ignoring spaces & next line)
+	<pre> This
+	     is a sample
+	     text.
+	</pre>
+-----------------------------------------------------------------
+
+--------------------inline vs block -----------------------------
+inline level element: * width occupied is only as much of element size
+                    * these element displayed in the same line 
+                    * it will tack content height and width
+                    * ex: span, input tag, anchor tag
+
+block level element: * width occupied is up to complete screen
+                    * these element displayed in the next line 
+                    * it will tack content height and full width of screen or parent element
+                    * div, h1-h6, p tag
+
+-------------------------------------------------------------
+Page Layout Techniques: using Semantic tags for layout
+	<header>
+	<main>
+	<footer>
+
+Inside Main Tag
+	+ Section Tag: For a section on your page
+	<section>
+
+	+ Article Tag: For an article on your page
+	<article>
+
+	+ Aside Tag: For content aside main content(ads)
+	<aside>
+
+Div Tag: Div is a container used for other HTML elements
+Block Element (takes full width)
+
+Span Tag: Span is also a container used for other HTML elements
+Inline Element (takes width as per size)
+---------------------------------------------------------------
+
+--------------HTML Forms---------------------------------------
+
+<label for="name">Name:</label>
+---------------------------------
++ Creates a label with the text Name:
++ for="name" links the label to the input whose id is "name".
+
+<input type="text" id="name" name="name" placeholder="Enter your name">
+----------------------------------------------------
++Inputs must have name to send data to backend.
++ type="text" → Creates a text input.
++ id="name" → Gives the input a unique identifier.
++ name="name" → The key used when submitting the form.
++ placeholder="Enter your name" → Shows a hint until the user types.
+
++ name → used to send data
++ id → used for label linking
++ label for = input id
++ radio → same name, different value
++ checkbox → same name, multiple values allowed
++ required → makes field mandatory
++ pattern → for validation
+
++-------------------------------------------------------------------------------------------------+
+| Input Type       | Purpose                        | Example                                     |
+| ---------------- | ------------------------------ | ------------------------------------------- |
+| `text`           | Single-line text input         | Name, City                                  |
+| `password`       | Hides entered characters       | Password                                    |
+| `email`          | Accepts email addresses        | [user@example.com](mailto:user@example.com) |
+| `number`         | Accepts numeric values         | Age, Quantity                               |
+| `url`            | Accepts website URLs           | [https://example.com](https://example.com)  |
+| `search`         | Search field                   | Search bar                                  |
+| `date`           | Date picker                    | Birth Date                                  |
+| `radio`          | Select one option from a group | Gender                                      |
+| `checkbox`       | Select multiple options        | Hobbies                                     |
+| `image`          | Image used as a submit button  | Custom Submit Button                        |
+| `time`           | Time picker                    | Meeting Time                                |
+| `button`         | Generic clickable button       | Click Me                                    |
+| `reset`          | Resets all form fields         | Reset                                       |
+| `submit`         | Submits the form               | Submit                                      |
+| `datetime-local` | Date and time picker           | Appointment                                 |
+| `tel`            | Telephone number input         | Mobile Number                               |
+| `month`          | Month and year picker          | July 2026                                   |
+| `week`           | Week picker                    | Week 30                                     |
+| `color`          | Color picker                   | Choose Theme Color                          |
+| `range`          | Slider control                 | Volume, Brightness                          |
+| `file`           | Upload files                   | Resume, Image                               |
+| `hidden`         | Hidden value sent with form    | User ID                                     |
+---------------------------------------------------------------------------------------------------
+
+    <textarea name="input" id="id1" rows="10" cols="50" placeholder="Enter your text here..."></textarea>
+    // creates text area
+
+    <br><br>
+    <label for="course">choose Course:</label>
+    <select name="course" id="course">
+        <option value="html">HTML</option>
+        <option value="css">CSS</option>
+    </select>
+
+    <datalist type="text" id="city" placeholder="Enter your city">
+        <option value="New York">New York</option>
+        <option value="Los Angeles">Los Angeles</option>
+        <option value="Chicago">Chicago</option>
+    </datalist>
+
+form attribute:
+---------------
+
+# HTML `<form>` Attributes
+The `<form>` element is used to collect user input and send it to a server.
+
+## Syntax:
+<form action="/submit" method="post">
+    <!-- Form elements -->
+</form>
+
+# 1. `action`
+Specifies **where the form data will be sent** after the user clicks the Submit button.
+
+Syntax:
+<form action="/login">
+
+Example
+<form action="index.html">
+
+If omitted:
+
+```html
+<form>
+The form submits to the **current page**.
+
+# 2. `method` :Specifies **how the data is sent**.
+### Values:
+    * `get`
+    * `post`
+
+### Example:
+<form method="get">
+    or
+<form method="post">
+
+### GET
+-------
+* Data is appended to the URL.
+* Used for searching.
+* Limited data size.
+* Data is visible.
+Example: search.html?name=Tarun
+
+### POST
+---------
+* Data is sent in the request body.
+* Better for passwords and sensitive data.
+* Can send large amounts of data.
+
+# 3. `target`: Specifies **where the response will open**.
+### Values: 
+| Value     | Description                 |
+| --------- | --------------------------- |
+| `_self`   | Opens in same tab (default) |
+| `_blank`  | Opens in new tab            |
+| `_parent` | Opens in parent frame       |
+| `_top`    | Opens in full window        |
+
+### Example
+<form target="_blank">
+
+# 4. `autocomplete`: Controls whether the browser should remember previously entered values.
+### Values:
+* `on`
+* `off`
+
+### Example:
+<form autocomplete="on">
+        or
+<form autocomplete="off">
+
+# 5. `novalidate`: Disables browser validation.
+Normally: <input type="email" required>
++ The browser checks if the email is valid.
+
+With: <form novalidate>
+No validation occurs.
+
+# 6. `name`: Assigns a name to the form.
+<form name="studentForm">
+Can be accessed in JavaScript.
+
+```javascript-
+document.forms["studentForm"]
+```
+# 7. `id`: Provides a unique identifier.
+<form id="loginForm">
+Useful for CSS and JavaScript.
+
+```javascript
+document.getElementById("loginForm")
+```
+# 8. `onsubmit`: Executes JavaScript before submitting the form.
+<form onsubmit="return validate()">
+If the function returns:
+* `true` → Form submits.
+* `false` → Submission is cancelled.
+
+# Complete Example:
+------------------
+<form
+    action="/register"
+    method="post"
+    target="_blank"
+    autocomplete="on"
+    id="registerForm"
+    name="registerForm"
+    onsubmit="return validate()"
+>
+    <input type="text" name="name">
+    <input type="email" name="email">
+    <input type="file" name="photo">
+    <input type="submit">
+</form>
+-----------------
+
+# Quick Revision Table
+-----------------------------------------------------------
+| Attribute        | Purpose                               |
+| ---------------- | --------------------------------------|
+| `action`         | URL where form data is sent           |
+| `method`         | HTTP method (`GET` or `POST`)         |
+| `target`         | Where the response opens              |
+| `autocomplete`   | Enable or disable browser autofill    |
+| `novalidate`     | Disable browser validation            |
+| `name`           | Name of the form                      |
+| `id`             | Unique identifier for CSS/JavaScript  |
+| `onsubmit`       | Run JavaScript before submission      |
+------------------------------------------------------------
+
+-------------------------------------------------------------------------
+
+------------------------i FRAMES ----------------------------------------
+website inside website
+Syntax:
+    <iframe src="link"></iframe>
+
+example:    
+<iframe src="form.html" frameborder="2" style="background-color: aquamarine;" width="300" height="400"></iframe>
+
+--------------------------------------------------------------------------
+		section
+
+A <section> element should almost always include a heading (<h1>-<h6>) to identify its purpose
+
+	<section>
+	  <h2>Our Services</h2>
+	  <p>We provide web development, SEO optimization, and cloud hosting solutions.</p>
+	</section>
+
++ Dividing a homepage into distinct parts (e.g., Intro, Features, Testimonials, Contact).
++ Splitting long articles or thesis papers into chapters or numbered subsections.
++ Separating components of a web application UI (like tabs or specific control panels)
+
+-------------------------------------------------------------------------------
+
+Video Tag
+
+<video src="myVid.mp4"> My Video </video>
+
+Attributes
+- controls
+- height
+- width
+- loop
+- autoplay

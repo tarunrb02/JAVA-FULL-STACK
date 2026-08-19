@@ -1,0 +1,15 @@
+div{
+    height: 100px;
+    width: 100px;
+    background-color: violet;
+    transition: all 0.5s ease-in-out 0.5s;
+}
+
+Div:hover{
+    Background-color: green;
+    font-size: 20px;
+}
+
+div:active{
+    background-color: red;
+}

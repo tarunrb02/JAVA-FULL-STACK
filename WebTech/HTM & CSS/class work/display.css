@@ -1,0 +1,43 @@
+*{
+    /* margin: 10px; */
+}
+
+/* h1,label{
+    background-color: red;
+}
+
+h1{
+    display: inline;
+}
+label{
+    display: block;
+} */
+
+.box{
+    background-color: blue;
+    height: 100px;
+    width: 100px;
+    margin: 20px;
+    /* display: inline;  /* div will loose it's height and width/ */
+    display: inline-block;
+}
+
+#div5{
+    /* visibility: hidden; */
+    display: none; /*when visibility is to hidden, space for the element is reserved but if display is set to none, space for the element is not reserved */
+}
+
+.parent{
+    background-color: aquamarine;
+    border: 2px solid black;
+    height: 300px;
+    width: 600px;
+}
+
+.div1{
+    background-color: red;
+    height: 100px;
+    width: 100px;
+    margin: 20px auto;
+    display: inline-block;
+}

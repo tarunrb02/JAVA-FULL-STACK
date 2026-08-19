@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=\, initial-scale=1.0">
+    <title>Forms</title>
+</head>
+<body>
+    <textarea name="input" id="id1" rows="10" cols="50" placeholder="Enter your text here..."></textarea>
+    <br><br>
+    <label for="course">choose Course:</label>
+    <select name="course" id="course">
+        <option value="html">HTML</option>
+        <option value="css">CSS</option>
+        <option value="js">JavaScript</option>
+        <option value="python">Python</option>
+    </select>
+    <br><br>
+
+    <label for="course">choose fullstack Course:</label>
+    <br>
+    <select multiple name="course" id="course">
+        <optgroup label="Web Development">
+            <option value="html">HTML</option>
+            <option value="css">CSS</option>
+            <option value="js">JavaScript</option>
+            <option value="python">Python</option>
+        </optgroup>
+        <optgroup label="Data Science">
+            <option value="python">Python</option>
+            <option value="r">R</option>
+            <option value="sql">SQL</option>
+        </optgroup>
+    </select>
+    <br><br>
+    <datalist id="city" type="text" placeholder="Enter your city">
+        <option value="New York">New York</option>
+        <option value="Los Angeles">Los Angeles</option>
+        <option value="Chicago">Chicago</option>
+        <option value="Houston">Houston</option>
+        <option value="Phoenix">Phoenix</option>
+        <option value="Philadelphia">Philadelphia</option>
+        <option value="San Antonio">San Antonio</option>
+        <option value="San Diego">San Diego</option>
+        <option value="Dallas">Dallas</option>
+        <option value="San Jose">San Jose</option>
+    </datalist>
+    <input type="submit" value="Submit">
+
+</body>
+</html>

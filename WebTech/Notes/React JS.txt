@@ -1,0 +1,64 @@
+What is React JS?
++ React JS is a JS library
++building User Interface and handling User Interactions clint side.
+
+Note: Only react is not enough to create application it's biggest drawback of react---why?
+
+=> react is lib used to create User interfaces it cannot control application flow
+ex: if we talk about spring boot we can control application flow but with react we need to help of  some framework
+
+Features of ReactJS
++ It's component based
+	- Reusability
+	- faster
++ ReactJS uses  virtual DOM and Shadow DOM that makes the user experiences better->MP
+
+Shadow DOM:
+
++ JS DOM Manipulation is slow
++ react will always maintain copy of DOM
++ When we use JS in previous classes and make some changes in DOM (DOM Manipulation) it will take time to reflect changes
++ React solves this by using Virtual DOM(Duplicate DOM): so when we make any changes react will do changes in virtual DOM and shows us immediately but in background it will do changes to actual DOM.
+
+We can develop react application with these combo
+1. React JS -> JavaScript/typescript
+2. React JS -> Component based development -> class/function
+
+Note: class based concept is outdated
+
+How to create react js app
+
+1. Install nodejs
+2. run below command
+3. npx create-react-app first-app
+	- cd first-app
+	- npm start
+what is component in ReactJS?
+1. Each component is collection of html, css, js ---> custom tag --> <card/>
+2. Each component is collection of jsx(html + js) and css
+
+when we create any app you  will get root level component --> <App/> --> App.css, App.js
+
+Rules for making component:
+--------------------------
+1. React follows parent child hierarchy(it says all elements inside one parent tag) with this you will have one unnecessary extra parent tag so to overcome  this you can give one empty tag
+2. If something starts it should end, unlike html <input type=text> 
+
+Basic structure of create component
+-----------------------------------
+
+import React from "react";
+import "./mycard.css"; // importing CSS
+
+const Mycard = (props) => {  // props is like parameters we can give only String as props
+  return (
+    <div className="card">
+      <div className="card-body">
+        <h5 className="card-title">{props.cardTitle}</h5>  // react expressions { } 
+      </div>
+    </div>
+  );
+};
+
+export default Mycard;  // exporting the react component
+

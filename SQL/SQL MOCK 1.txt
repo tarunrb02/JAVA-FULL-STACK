@@ -1,0 +1,207 @@
+Q1. DISPLAY TOP 5 SALARYES FROM THE TABLE 
+mysql> SELECT FNAME, SALARY FROM EMP_LOG ORDER BY SALARY LIMIT 5;
++-------+-----------+
+| FNAME | SALARY    |
++-------+-----------+
+| RI*A  | 30000.000 |
+| ROHIT | 30000.000 |
+| ROHIT | 40000.000 |
+| ARUN  | 40000.000 |
+| R@M   | 45000.000 |
++-------+-----------+
+5 rows in set (0.00 sec)
+
+Q2. USING CASE GIVE INCRIMENT BY 20% FOR EMPLOYEES WHOS SALARYS IS NBLEOW 40K
+mysql> UPDATE EMP_LOG SET SALARY = CASE
+    -> WHEN SALARY<40000 THEN (SALARY+(SALARY*20/100))
+    -> ELSE SALARY
+    -> END;
+Query OK, 2 rows affected (0.07 sec)
+Rows matched: 10  Changed: 2  Warnings: 0
+
+mysql> SELECT * FROM EMP_LOG;
++------+---------+--------+-------+---------------+---------------------+--------------+---------+-----------+
+| E_ID | FNAME   | LNAME  | E_AGE | EMP_PHONE_NUM | EMP_EMAIL           | EMP_LOCATION | DEPT_ID | SALARY    |
++------+---------+--------+-------+---------------+---------------------+--------------+---------+-----------+
+|    1 | R@M     | KUMAR  |    23 |          NULL | RAMKUMAR@GMAIL.COM  | MUMBAI       |     101 | 45000.000 |
+|    2 | S$HANA  | PATIL  |    24 |          NULL | SAHANA@GMAIL.COM    | MYSORE       |     102 | 70000.000 |
+|    3 | PRIT#AM | PARKER |    25 |          NULL | PRITAM@GMAIL.COM    | BENGALURU    |     103 | 50000.000 |
+|    4 | RI*A    | SHARMA |    21 |          NULL | NULL                | DELHI        |     104 | 36000.000 |
+|    5 | TA%RUN  | R B    |    22 |          NULL | TARUNRB02@GMAIL.COM | BAGALKOT     |     103 | 50000.000 |
+|    6 | AFFAN   | NULL   |    22 |          NULL | AFFAN123@GMAIL.COM  | BAGALKOT     |     101 | 45000.000 |
+|    7 | ROHIT   | SHARMA |    42 |          NULL | ROHIT@GMAIL.COM     | DELHI        |     105 | 40000.000 |
+|    8 | ARUN    | KUMAR  |    23 |          NULL | ARUN@GMAIL.COM      | BENGALURU    |     105 | 40000.000 |
+|    9 | ROHIT   | LOHAR  |    22 |          NULL | ROHITL@GMAIL.COM    | BAGALKOT     |     104 | 36000.000 |
+|   10 | varun   | reddy  |    22 |          NULL | varun@gmail.com     | kolar        |     102 | 70000.000 |
++------+---------+--------+-------+---------------+---------------------+--------------+---------+-----------+
+10 rows in set (0.00 sec)
+
+Q3. DELET ALL EMP WHO EARNING IS LESS 25000
+mysql> DELETE FROM EMP_LOG WHERE SALARY<25000;
+Query OK, 0 rows affected (0.07 sec)
+
+Q4. CHANGE THE CITY O F ALL MUMBAI EMP INTO BNG 
+mysql> UPDATE EMP_LOG SET EMP_LOCATION='BENGALURU' WHERE EMP_LOCATION='MUMBAI';
+Query OK, 1 row affected (0.07 sec)
+Rows matched: 1  Changed: 1  Warnings: 0
+
+mysql> SELECT * FROM EMP_LOG;
++------+---------+--------+-------+---------------+---------------------+--------------+---------+-----------+
+| E_ID | FNAME   | LNAME  | E_AGE | EMP_PHONE_NUM | EMP_EMAIL           | EMP_LOCATION | DEPT_ID | SALARY    |
++------+---------+--------+-------+---------------+---------------------+--------------+---------+-----------+
+|    1 | R@M     | KUMAR  |    23 |          NULL | RAMKUMAR@GMAIL.COM  | BENGALURU    |     101 | 45000.000 |
+|    2 | S$HANA  | PATIL  |    24 |          NULL | SAHANA@GMAIL.COM    | MYSORE       |     102 | 70000.000 |
+|    3 | PRIT#AM | PARKER |    25 |          NULL | PRITAM@GMAIL.COM    | BENGALURU    |     103 | 50000.000 |
+|    4 | RI*A    | SHARMA |    21 |          NULL | NULL                | DELHI        |     104 | 36000.000 |
+|    5 | TA%RUN  | R B    |    22 |          NULL | TARUNRB02@GMAIL.COM | BAGALKOT     |     103 | 50000.000 |
+|    6 | AFFAN   | NULL   |    22 |          NULL | AFFAN123@GMAIL.COM  | BAGALKOT     |     101 | 45000.000 |
+|    7 | ROHIT   | SHARMA |    42 |          NULL | ROHIT@GMAIL.COM     | DELHI        |     105 | 40000.000 |
+|    8 | ARUN    | KUMAR  |    23 |          NULL | ARUN@GMAIL.COM      | BENGALURU    |     105 | 40000.000 |
+|    9 | ROHIT   | LOHAR  |    22 |          NULL | ROHITL@GMAIL.COM    | BAGALKOT     |     104 | 36000.000 |
+|   10 | varun   | reddy  |    22 |          NULL | varun@gmail.com     | kolar        |     102 | 70000.000 |
++------+---------+--------+-------+---------------+---------------------+--------------+---------+-----------+
+10 rows in set (0.00 sec)
+
+
+Q5. DECRIMENT BY 8 % FOR ALL THE EMP WHO BELONG TO 201 DPT
+mysql> UPDATE EMP_LOG SET SALARY=(SALARY-(SALARY*8/100)) WHERE DEPT_ID=101;
+Query OK, 2 rows affected (0.07 sec)
+Rows matched: 2  Changed: 2  Warnings: 0
+
+mysql> SELECT * FROM EMP_LOG;
++------+---------+--------+-------+---------------+---------------------+--------------+---------+-----------+
+| E_ID | FNAME   | LNAME  | E_AGE | EMP_PHONE_NUM | EMP_EMAIL           | EMP_LOCATION | DEPT_ID | SALARY    |
++------+---------+--------+-------+---------------+---------------------+--------------+---------+-----------+
+|    1 | R@M     | KUMAR  |    23 |          NULL | RAMKUMAR@GMAIL.COM  | BENGALURU    |     101 | 41400.000 |
+|    2 | S$HANA  | PATIL  |    24 |          NULL | SAHANA@GMAIL.COM    | MYSORE       |     102 | 70000.000 |
+|    3 | PRIT#AM | PARKER |    25 |          NULL | PRITAM@GMAIL.COM    | BENGALURU    |     103 | 50000.000 |
+|    4 | RI*A    | SHARMA |    21 |          NULL | NULL                | DELHI        |     104 | 36000.000 |
+|    5 | TA%RUN  | R B    |    22 |          NULL | TARUNRB02@GMAIL.COM | BAGALKOT     |     103 | 50000.000 |
+|    6 | AFFAN   | NULL   |    22 |          NULL | AFFAN123@GMAIL.COM  | BAGALKOT     |     101 | 41400.000 |
+|    7 | ROHIT   | SHARMA |    42 |          NULL | ROHIT@GMAIL.COM     | DELHI        |     105 | 40000.000 |
+|    8 | ARUN    | KUMAR  |    23 |          NULL | ARUN@GMAIL.COM      | BENGALURU    |     105 | 40000.000 |
+|    9 | ROHIT   | LOHAR  |    22 |          NULL | ROHITL@GMAIL.COM    | BAGALKOT     |     104 | 36000.000 |
+|   10 | varun   | reddy  |    22 |          NULL | varun@gmail.com     | kolar        |     102 | 70000.000 |
++------+---------+--------+-------+---------------+---------------------+--------------+---------+-----------+
+10 rows in set (0.00 sec)
+
+Q6. DISPLAY THE NAME OF EMP WHO IS HAVING EXASTLY 5 CHAR AND 5TH CHAR SHOULD "N"
+mysql> SELECT * FROM EMP_LOG WHERE FNAME LIKE '____N';
++------+-------+-------+-------+---------------+--------------------+--------------+---------+-----------+
+| E_ID | FNAME | LNAME | E_AGE | EMP_PHONE_NUM | EMP_EMAIL          | EMP_LOCATION | DEPT_ID | SALARY    |
++------+-------+-------+-------+---------------+--------------------+--------------+---------+-----------+
+|    6 | AFFAN | NULL  |    22 |          NULL | AFFAN123@GMAIL.COM | BAGALKOT     |     101 | 41400.000 |
+|   10 | varun | reddy |    22 |          NULL | varun@gmail.com    | kolar        |     102 | 70000.000 |
++------+-------+-------+-------+---------------+--------------------+--------------+---------+-----------+
+2 rows in set (0.00 sec)
+
+Q7. FIND THE EMP WHOSE SALARYES BETWEEN 35K AND 50K
+mysql> SELECT * FROM EMP_LOG WHERE SALARY BETWEEN 35000 AND 50000;
++------+---------+--------+-------+---------------+---------------------+--------------+---------+-----------+
+| E_ID | FNAME   | LNAME  | E_AGE | EMP_PHONE_NUM | EMP_EMAIL           | EMP_LOCATION | DEPT_ID | SALARY    |
++------+---------+--------+-------+---------------+---------------------+--------------+---------+-----------+
+|    1 | R@M     | KUMAR  |    23 |          NULL | RAMKUMAR@GMAIL.COM  | BENGALURU    |     101 | 41400.000 |
+|    3 | PRIT#AM | PARKER |    25 |          NULL | PRITAM@GMAIL.COM    | BENGALURU    |     103 | 50000.000 |
+|    4 | RI*A    | SHARMA |    21 |          NULL | NULL                | DELHI        |     104 | 36000.000 |
+|    5 | TA%RUN  | R B    |    22 |          NULL | TARUNRB02@GMAIL.COM | BAGALKOT     |     103 | 50000.000 |
+|    6 | AFFAN   | NULL   |    22 |          NULL | AFFAN123@GMAIL.COM  | BAGALKOT     |     101 | 41400.000 |
+|    7 | ROHIT   | SHARMA |    42 |          NULL | ROHIT@GMAIL.COM     | DELHI        |     105 | 40000.000 |
+|    8 | ARUN    | KUMAR  |    23 |          NULL | ARUN@GMAIL.COM      | BENGALURU    |     105 | 40000.000 |
+|    9 | ROHIT   | LOHAR  |    22 |          NULL | ROHITL@GMAIL.COM    | BAGALKOT     |     104 | 36000.000 |
++------+---------+--------+-------+---------------+---------------------+--------------+---------+-----------+
+8 rows in set (0.00 sec)
+
+Q8. FIND THE NON AVAILABLE VALUE IN FROM EMAIL COLUMN
+mysql> SELECT * FROM EMP_LOG WHERE EMP_EMAIL IS NULL;
++------+-------+--------+-------+---------------+-----------+--------------+---------+-----------+
+| E_ID | FNAME | LNAME  | E_AGE | EMP_PHONE_NUM | EMP_EMAIL | EMP_LOCATION | DEPT_ID | SALARY    |
++------+-------+--------+-------+---------------+-----------+--------------+---------+-----------+
+|    4 | RI*A  | SHARMA |    21 |          NULL | NULL      | DELHI        |     104 | 36000.000 |
++------+-------+--------+-------+---------------+-----------+--------------+---------+-----------+
+1 row in set (0.07 sec)
+
+Q9. DISPLAY FIRST AND 5TH LOWEST SALARY
+mysql> (SELECT * FROM EMP_LOG ORDER BY SALARY LIMIT 1) UNION (SELECT * FROM EMP_LOG ORDER BY SALARY LIMIT 1 OFFSET 4);
++------+-------+--------+-------+---------------+--------------------+--------------+---------+-----------+
+| E_ID | FNAME | LNAME  | E_AGE | EMP_PHONE_NUM | EMP_EMAIL          | EMP_LOCATION | DEPT_ID | SALARY    |
++------+-------+--------+-------+---------------+--------------------+--------------+---------+-----------+
+|    4 | RI*A  | SHARMA |    21 |          NULL | NULL               | DELHI        |     104 | 36000.000 |
+|    1 | R@M   | KUMAR  |    23 |          NULL | RAMKUMAR@GMAIL.COM | BENGALURU    |     101 | 41400.000 |
++------+-------+--------+-------+---------------+--------------------+--------------+---------+-----------+
+2 rows in set (0.00 sec)
+
+Q10. ARRANGE THE EMAILS IN ALPABETICAL IRDER
+mysql> SELECT * FROM EMP_LOG ORDER BY EMP_EMAIL;
++------+---------+--------+-------+---------------+---------------------+--------------+---------+-----------+
+| E_ID | FNAME   | LNAME  | E_AGE | EMP_PHONE_NUM | EMP_EMAIL           | EMP_LOCATION | DEPT_ID | SALARY    |
++------+---------+--------+-------+---------------+---------------------+--------------+---------+-----------+
+|    4 | RI*A    | SHARMA |    21 |          NULL | NULL                | DELHI        |     104 | 36000.000 |
+|    6 | AFFAN   | NULL   |    22 |          NULL | AFFAN123@GMAIL.COM  | BAGALKOT     |     101 | 41400.000 |
+|    8 | ARUN    | KUMAR  |    23 |          NULL | ARUN@GMAIL.COM      | BENGALURU    |     105 | 40000.000 |
+|    3 | PRIT#AM | PARKER |    25 |          NULL | PRITAM@GMAIL.COM    | BENGALURU    |     103 | 50000.000 |
+|    1 | R@M     | KUMAR  |    23 |          NULL | RAMKUMAR@GMAIL.COM  | BENGALURU    |     101 | 41400.000 |
+|    7 | ROHIT   | SHARMA |    42 |          NULL | ROHIT@GMAIL.COM     | DELHI        |     105 | 40000.000 |
+|    9 | ROHIT   | LOHAR  |    22 |          NULL | ROHITL@GMAIL.COM    | BAGALKOT     |     104 | 36000.000 |
+|    2 | S$HANA  | PATIL  |    24 |          NULL | SAHANA@GMAIL.COM    | MYSORE       |     102 | 70000.000 |
+|    5 | TA%RUN  | R B    |    22 |          NULL | TARUNRB02@GMAIL.COM | BAGALKOT     |     103 | 50000.000 |
+|   10 | varun   | reddy  |    22 |          NULL | varun@gmail.com     | kolar        |     102 | 70000.000 |
++------+---------+--------+-------+---------------+---------------------+--------------+---------+-----------+
+10 rows in set (0.00 sec)
+
+Q11. REMOVE ALL CONSTRAINS FROM THE TABLE 
+mysql> ALTER TABLE EMP_LOG DROP PRIMARY KEY;
+Query OK, 10 rows affected (0.15 sec)
+
+mysql> ALTER TABLE EMP_LOG DROP INDEX EMAIL;I
+Query OK, 0 rows affected (0.09 sec)
+
+mysql> ALTER TABLE EMP_LOG MODIFY EMP_PHONE_NUM BIGINT NULL;
+Query OK, 0 rows affected (0.08 sec)
+
+mysql> ALTER TABLE EMP_LOG DROP CHECK emp_log_chk_1;
+Query OK, 0 rows affected (0.08 sec)
+
+mysql> ALTER TABLE EMP_LOG DROP FOREIGN KEY emp_log_ibfk_1;
+Query OK, 0 rows affected (0.08 sec)
+
+mysql> ALTER TABLE EMP_LOG ALTER COLUMN EMP_LOCATION DROP DEFAULT;
+Query OK, 0 rows affected (0.08 sec)
+
+mysql> SHOW CREATE TABLE EMP_LOG;
+
+| EMP_LOG | CREATE TABLE `emp_log` (
+  `E_ID` int NOT NULL,
+  `FNAME` varchar(30) NOT NULL,
+  `LNAME` varchar(30) DEFAULT NULL,
+  `E_AGE` int DEFAULT NULL,
+  `EMP_PHONE_NUM` bigint DEFAULT NULL,
+  `EMP_EMAIL` varchar(40) DEFAULT NULL,
+  `EMP_LOCATION` varchar(35),
+  `DEPT_ID` int DEFAULT NULL,
+  `SALARY` decimal(10,3) DEFAULT NULL,
+  KEY `DEPT_ID` (`DEPT_ID`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci |
+
+
+Q12. ADD PRIMAFY KEY AND CHECK
+mysql> ALTER TABLE EMP_LOG ADD PRIMARY KEY(E_ID);
+Query OK, 0 rows affected (0.20 sec)
+
+mysql> ALTER TABLE EMP_LOG ADD CHECK(E_AGE>=19);
+Query OK, 10 rows affected (0.16 sec)
+
+---------+
+| EMP_LOG | CREATE TABLE `emp_log` (
+  `E_ID` int NOT NULL,
+  `FNAME` varchar(30) NOT NULL,
+  `LNAME` varchar(30) DEFAULT NULL,
+  `E_AGE` int DEFAULT NULL,
+  `EMP_PHONE_NUM` bigint DEFAULT NULL,
+  `EMP_EMAIL` varchar(40) DEFAULT NULL,
+  `EMP_LOCATION` varchar(35),
+  `DEPT_ID` int DEFAULT NULL,
+  `SALARY` decimal(10,3) DEFAULT NULL,
+  PRIMARY KEY (`E_ID`),
+  KEY `DEPT_ID` (`DEPT_ID`),
+  CONSTRAINT `emp_log_chk_1` CHECK ((`E_AGE` >= 19))
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci |
