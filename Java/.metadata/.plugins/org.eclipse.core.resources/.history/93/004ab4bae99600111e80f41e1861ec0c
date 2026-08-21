@@ -1,9 +1,0 @@
-package Encapsulation;
-
-public class Driver {
-	static Atm a= new Atm();
-	public static void main(String[] args) {
-			a.diposit(10000);
-			System.out.println(a.withdraw());
-	}
-}

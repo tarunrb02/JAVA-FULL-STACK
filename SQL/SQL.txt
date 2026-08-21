@@ -498,7 +498,7 @@ WE USE WILDCARD CHARECTER '%' AND '_'
 '%' ---> MULTIPLE CHARECTER
 '_' --> ONLY ONE CHARECTER
 
-IF THE PATTERN IT SELF CONTAINS WILD CARD CHARECTER WE USE ESCAPE CHARECTER '\' , '#' , '$' .....
+IF THE PATTERN IT SELF CONTAINS WILD CARD CHARECTER WE USE ESCAPE CHARECTER '\' , '#' , '$' ..... (USED TO REPRESENT THE NEXT CHAR IS NOT WILD CARD CHAR IT'S A NORMAL CHAR
 	++ SELECT * FROM EMP_LOG WHERE FNAME LIKE "%\%%";
 
 	SELECT * FROM EMP_LOG WHERE FNAME LIKE "%/%%" ESCAPE '/'
@@ -731,3 +731,114 @@ FUNCTIONS: ARE BUILT IN PROGRAMS WHICH ARE USED TO PERFORM SPECIFIC TASKS.
 		...
 		ELSE VALUE
 		END;
+
+++ WINDOW FUNCTIONS:
+	WINDOW FUNCTIONS PERFORM  CALCULATION ON SET OF ROWS (WITHOUT COMBINING) AND RETURNS RESULT FOR EVERY ROW
+	OVER --> REPRESENT THE IT IS WINDOW_FUNCTION
+	
+	SELECT COLUMNS, WINDOW_FUNCTION OVER(PARTITION BY COLUMN_NAME, ORDER BY COULUMN_NAME) FROM TABLE;
+	
+	+++ ROW_NUMBER(): RETURNS SEQUENTIAL NUMBERS EACH ROW
+		SELECT FNAME, SALARY, ROW_NUMBER() OVER(ORDER BY SALARY DESC) AS SL_NO FROM EMP_LOG;
+		SELECT FNAME, E_AGE, ROW_NUMBER() OVER(ORDER BY E_AGE DESC) AS SINIARITY FROM EMP_LOG;
+		+---------+-----------+-------+
+		| FNAME   | SALARY    | SL_NO |
+		+---------+-----------+-------+
+		| S$HANA  | 70000.000 |     1 |
+		| varun   | 70000.000 |     1 |
+		| PRIT#AM | 50000.000 |     3 |
+		| TA%RUN  | 50000.000 |     3 |
+		| R@M     | 41400.000 |     5 |
+		| AFFAN   | 41400.000 |     5 |
+		| ROHIT   | 40000.000 |     7 |
+		| ARUN    | 40000.000 |     7 |
+		| RI*A    | 36000.000 |     9 |
+		| ROHIT   | 36000.000 |     9 |
+		+---------+-----------+-------+
+		10 rows in set (0.00 sec)
+
+	+++ RANK(): IT WILL WILL RETURN RANK NUMBER FOR THE ROWS (IT WILL SKIP THE RANK SEQUENCE IS 2 ROW HAVE SAME RANK THAN NEXT RANK IS SKIPED)
+		SELECT FNAME, SALARY, RANK() OVER(ORDER BY SALARY DESC) AS RANK_NUM FROM EMP_LOG;
+		+---------+-----------+-------+
+		| FNAME   | SALARY    | SL_NO |
+		+---------+-----------+-------+
+		| S$HANA  | 70000.000 |     1 |
+		| varun   | 70000.000 |     1 |
+		| PRIT#AM | 50000.000 |     3 |
+		| TA%RUN  | 50000.000 |     3 |
+		| R@M     | 41400.000 |     5 |
+		| AFFAN   | 41400.000 |     5 |
+		| ROHIT   | 40000.000 |     7 |
+		| ARUN    | 40000.000 |     7 |
+		| RI*A    | 36000.000 |     9 |
+		| ROHIT   | 36000.000 |     9 |
+		+---------+-----------+-------+
+		10 rows in set (0.00 sec)
+
+		SELECT FNAME, E_AGE, DEPT_ID, RANK() OVER(PARTITION BY DEPT_ID ORDER BY E_AGE DESC) AS SINIARITY FROM EMP_LOG;
+		+---------+-------+---------+-----------+
+		| FNAME   | E_AGE | DEPT_ID | SINIARITY |
+		+---------+-------+---------+-----------+
+		| R@M     |    23 |     101 |         1 |
+		| RAM     |    23 |     101 |         1 |
+		| AFFAN   |    22 |     101 |         3 |
+		| S$HANA  |    24 |     102 |         1 |
+		| SAHANA  |    24 |     102 |         1 |
+		| varun   |    22 |     102 |         3 |
+		| PRIT#AM |    25 |     103 |         1 |
+		| PRITAM  |    25 |     103 |         1 |
+		| TA%RUN  |    22 |     103 |         3 |
+		| ROHIT   |    22 |     104 |         1 |
+		| RI*A    |    21 |     104 |         2 |
+		| ROHIT   |    42 |     105 |         1 |
+		| ARUN    |    23 |     105 |         2 |
+		+---------+-------+---------+-----------+
+
+	+++ DENSE_RANK():RANK(): IT WILL WILL RETURN RANK NUMBER FOR THE ROWS (IT WILL NOT SKIP THE RANK SEQUENCE)
+		SELECT FNAME, SALARY, DENSE_RANK() OVER(ORDER BY SALARY DESC) AS RANK_NUM FROM EMP_LOG;
+		+---------+-----------+----------+
+		| FNAME   | SALARY    | RANK_NUM |
+		+---------+-----------+----------+
+		| S$HANA  | 70000.000 |        1 |
+		| varun   | 70000.000 |        1 |
+		| PRIT#AM | 50000.000 |        2 |
+		| TA%RUN  | 50000.000 |        2 |
+		| RAM     | 50000.000 |        2 |
+		| PRITAM  | 50000.000 |        2 |
+		| R@M     | 41400.000 |        3 |
+		| AFFAN   | 41400.000 |        3 |
+		| ROHIT   | 40000.000 |        4 |
+		| ARUN    | 40000.000 |        4 |
+		| SAHANA  | 40000.000 |        4 |
+		| RI*A    | 36000.000 |        5 |
+		| ROHIT   | 36000.000 |        5 |
+		+---------+-----------+----------+
+
++ AGGREGATE FUNCTION (MULTI ROW FUNCTION): IT WILL PERFORM THE FUNCTIONS ON ALL ROW AT A TIME AND RETURN ONLY ONE ROW AS THE RESULT 
+
+	DIFFERENT AGGREGATE FUNCTIONS:
+	1. MAX()
+	2. MIN()
+	3. AVG()
+	4. COUNT()
+	5. SUM()
+
+	SELECT AGGREGATE_FUNCTIONS(COLUMN_NAME) FROM TABLE;
+
+	SELECT MAX(SALARY) FROM EMP_LOG;
+	+-------------+
+	| MAX(SALARY) |
+	+-------------+
+	|   70000.000 |
+	+-------------+
+
+	SELECT COUNT(*) FROM EMP_LOG;
+
+	SELECT COUNT(E_ID) FROM EMP_LOG;	
+
+	SELECT COUNT(*), MAX(SALARY), MIN(SALARY), AVG(SALARY), SUM(SALARY) FROM EMP_LOG;
+	+----------+-------------+-------------+---------------+-------------+
+	| COUNT(*) | MAX(SALARY) | MIN(SALARY) | AVG(SALARY)   | SUM(SALARY) |
+	+----------+-------------+-------------+---------------+-------------+
+	|       13 |   70000.000 |   36000.000 | 47292.3076923 |  614800.000 |
+	+----------+-------------+-------------+---------------+-------------+

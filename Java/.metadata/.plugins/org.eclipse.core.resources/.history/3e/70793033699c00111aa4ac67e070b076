@@ -1,0 +1,20 @@
+package MethedOverraiding;
+
+public class Developer extends Employee {
+	
+	@Override
+	void action() {
+		super.name="Tarun";
+		super.action();
+		System.out.println("he depelops app ");
+	}
+	
+	public static void main(String[] args) {
+		Developer d=new Developer();
+		d.action();
+		System.out.println(d.name);
+		
+//		Employee e=new Employee();
+//		e.action();
+	}
+}
