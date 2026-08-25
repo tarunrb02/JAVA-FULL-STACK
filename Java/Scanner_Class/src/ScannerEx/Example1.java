@@ -9,11 +9,15 @@ public class Example1 {
 //		int b=sc.nextInt();
 //		System.out.println("addition of 2 number: "+(a+b));
 		System.out.println("Enter String: ");
-//		String c=sc.next();
+		String c=sc.next();
+//		sc.nextLine();
 		System.out.println();
+		System.out.println();
+		System.out.println();
+		System.out.println("Enter String: ");
 		String d=sc.nextLine();
 		
-//		System.out.println(c);
+		System.out.println(c);
 		System.out.println(d);
 		sc.close();
 	}
