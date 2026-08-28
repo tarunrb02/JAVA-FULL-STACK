@@ -7,7 +7,7 @@ public class Dog extends Animal {
 	public static void main(String[] args) {
 		Animal a=new Dog(); // up casting
 		//		a.name="tom"; but we can't access child members
-		if(a instanceof Dog) {
+		if(a instanceof Dog) { // checking object type before down casting
 
 			Dog d=(Dog) a;  // down casting
 			d.name="tommy";

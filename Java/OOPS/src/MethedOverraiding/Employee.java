@@ -3,7 +3,7 @@ package MethedOverraiding;
 public class Employee {
 	String name;
 	
-	static void action() {
+	 void action() {
 		System.out.println("he works for company");
 	}
 	void eat() {

@@ -1,7 +1,0 @@
-package MethedOverraiding;
-
-public class Employee {
-	void action() {
-		System.out.println("he works for company");
-	}
-}
