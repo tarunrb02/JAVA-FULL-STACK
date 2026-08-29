@@ -1,0 +1,205 @@
+Database: 
+it is a System where we Stored the data electronically in structured and Organized way
+
+Data: data is Collection of raw facts and figures which is unprocessed or unorganized
+
+Advantages of  Database
++ easy to store, access and manage
++ it will provide security and authorization
++ it will provide backup for data
+
+Types of DBMS
+1. RDMS - in RDBMS data will be stored in the  row and column i.e tables
+	+ SQL is lng  used in RDBMS System
+	ex: MySQL, Oracle, PostreSQL
+
+2. Non RDMS: data is stored in unstructured way. it will store data as  key -value pair, files, json...etc
+	+ no SQL is lng  used in non-RDBMS System
+	ex: mangoDB, myDB
+
+Relational model: (E F Codd)
+--------------------------
++ He said, all the data will be stored in the form of tables
++ Any DBMS which follows relational model will becomes RDMS
+
+Rules of E F Codd
+1. Any data entered into the cell must be single valued data
+2. we can stored data in multiple tables, if we want to establish the relation b/w the tables we have to use Key attributes
+3. All the data will be stored the form of table including metadata
+4. Data will be validated in 2 steps
+	+ By assigning the Datatypes ---->(Mandatory)
+	+ By assigning Constrains -----> (Not Mandatory)
+
+
+Syntax to create the database:
+	CREATE DATABASE DATABSE_NAME;
+	SHOW DATABASES;
+
+Syntax to USE the database:
+	USE DATABSE_NAME;
+
+Syntax to create the TABLE:
+	CREATE TABLE TABLE_NAME{COL1 DATATYPE, COL2 DATATYPE, .....);
+	SHOW TABLES;
+
+Syntax to create the TABLE:
+	INSERT INTO TABLE TABLE_NAME() VALUES(........);
+
+
+DATA TYPES:
+1. NUMERIC TYPE OF DATA:
+	- TINYINT(1BYTE)
+	- SMALLINT(2 BYTE)
+	- MEDIUMINT(3 BYTE)
+	- INT(4 BYTE)
+	- BIGINT(8 BYTE)
+	- DECIMEL(M, D)->(8 BYTE):  Exact fixed-point number
+	- FLOAT(4 BYTE)
+	- DOUBLE(8 BYTE)
+
+2. CHARECTER TYPE OF DATA:
+	- CHAR: Fixed-length string => REMAING BITS WILL BE SPACE PADDED
+	- VARCHAR: Variable-length string => IT CONSUME ONLY REQUIRED MEMORY SPACE
+	- TEXT: Variable-length TEXT BLOCK 64KB OF TEXT
+	- TINYTEXT: 255 BYTES OF TEXT
+	- LONG TEXT: 4.29GB OG TEXT
+
+3.BLOB: Binary Large Object for raw data like images, files, or encrypted text
+
+4. Date and Time Data Types: These types allow tracking of chronological data & automatically validate dates.
+	- DATE: Format YYYY-MM-DD. Range: 1000-01-01 to 9999-12-31.
+	- TIME: Format HH:MM:SS. Tracks time or time intervals.
+	- DATETIME: Format YYYY-MM-DD HH:MM:SS. Range: Year 1000 to 9999.
+	- YEAR: Stores a 4-digit year format. Range: 1901 to 2155.
+	- TIMESTAMP: Format YYYY-MM-DD HH:MM:SS. Universal time; ranges from 1970 to 2038. Often auto-updates on row modifications.
+
+CONSTRAINS:
+-----------
+Constrains are some set of rules or restriction which are applied or enforced over the columns
+
+1. NOT NULL: it is ensuring the column should not contain any null values means every cell must contain a value
+2. UNIQUE: (Distinct) it used to identify the column uniquely.
+3. PRIMARY KEY: it is a combination of NOT NULL and UNIQUE and it is used to identify and rows uniquely
+4. FOREIGN KEY: it is used to establish a relation b/w two or more tables, yo become a foreign key in a one table it should be primary key in parent table
+
+5. CHECK(Condition): use to apply Conditions on columns. every value should satisfy this condition before entering the table
+
+6. DEFAULT: it is a constrain which defined value is automatically updated/ if we are not specifying during insertion time
+
+ENTITY:
+	Anything which is exist in real world is called entity.
+
+TYPES OF ENTITY
+1. Physical/ Tangible Entity : ex: Laptop, marker...
+	Entity which are having physical Structure
+2. Conceptual/ Intangible Entity: ex: Internet, Air
+	Entity which are not have any physical Structure
+
+ATTRIBUTES: are properties or characteristics of entity
+
+TYPES OF ATTRIBUTES:
+1. Simple attributes: attribute which can't be divided into Further attributes
+	ex: Age, Phone_No
+2. Composite Attributes:
+	ex: Name, DOB, Address
+3. Single valued Attribute: Attribute which are having Single value
+	ex: Name, Age, Aadhar_no
+4. Multi valued Attribute: Attribute which are having More then one value
+	ex: Phone_no, Emails
+5. Derived Attributes: one attribute derived from another attributes
+	ex: Age is derived from DOB
+6. Key Attributes: attribute which can be identified uniquely
+	ex: ID's
+-------------------------------------------------------------------------------------------
+
+mysql> CREATE DATABASE ORG;
+
+mysql> CREATE TABLE DEPT(D_ID INT PRIMARY KEY,D_NAME VARCHAR(25) NOT NULL);
+
+mysql> DESC DEPT;
++--------+-------------+------+-----+---------+-------+
+| Field  | Type        | Null | Key | Default | Extra |
++--------+-------------+------+-----+---------+-------+
+| D_ID   | int         | NO   | PRI | NULL    |       |
+| D_NAME | varchar(25) | NO   |     | NULL    |       |
++--------+-------------+------+-----+---------+-------+
+
+mysql> INSERT INTO DEPT VALUES(101, 'HR'),(102, 'IT'),(103, 'FINANCE'),(104, 'SALES'),(105, 'DIGITAL MARKATING');
+
+mysql> SELECT * FROM DEPT;
++------+-------------------+
+| D_ID | D_NAME            |
++------+-------------------+
+|  101 | HR                |
+|  102 | IT                |
+|  103 | FINANCE           |
+|  104 | SALES             |
+|  105 | DIGITAL MARKATING |
++------+-------------------+
+
+
+mysql> INSERT INTO EMPLOYEE VALUES (1, 'RAM', 'KUMAR', 23, 'RAM@GMAIL.COM', 'MUMBAI', 101), (2, 'SAHANA', 'PATIL', 24, 'SAHANA@GMAIL.COM', 'MYSORE',102), (3, 'PRITAM', 'PARKER', 25, 'PRITAM@GMAIL.COM', 'BENGALURU', 103);
+
+mysql> SELECT * FROM EMPLOYEE;
++------+--------+----------+-------+---------------------+-----------+---------+
+| E_ID | FNAME  | LNAME    | E_AGE | EMAIL               | LOCATION  | DEPT_ID |
++------+--------+----------+-------+---------------------+-----------+---------+
+|    1 | RAM    | KUMAR    |    23 | RAM@GMAIL.COM       | MUMBAI    |     101 |
+|    2 | SAHANA | PATIL    |    24 | SAHANA@GMAIL.COM    | MYSORE    |     102 |
+|    3 | PRITAM | PARKER   |    25 | PRITAM@GMAIL.COM    | BENGALURU |     103 |
+|    4 | RIYA   | SHARMA   |    23 | RIYA@GMAIL.COM      | DELHI     |     104 |
++------+--------+----------+-------+---------------------+-----------+---------+
+
+mysql> show create table employee;
+
+| employee | CREATE TABLE `employee` (
+  `E\_ID` int NOT NULL,
+  `FNAME` varchar(30) NOT NULL,
+  `LNAME` varchar(30) DEFAULT NULL,
+  `E\_AGE` int DEFAULT NULL,
+  `EMAIL` varchar(40) DEFAULT NULL,
+  `LOCATION` varchar(35) DEFAULT 'BENGALURU',
+  `DEPT\_ID` int DEFAULT NULL,
+  PRIMARY KEY (`E\_ID`),
+  UNIQUE KEY `EMAIL` (`EMAIL`),
+  KEY `DEPT\_ID` (`DEPT\_ID`),
+  CONSTRAINT `employee\_ibfk\_1` FOREIGN KEY (`DEPT\_ID`) REFERENCES `dept` (`D\_ID`),
+  CONSTRAINT `employee\_chk\_1` CHECK ((`E\_AGE` >= 19))
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci |
+
+
+-------------------------------------------------------------------------------------------
+
+RELATIONSHIP:
+	It is a association among two or more entities/tables. these relationships are established using primary key and foreign key
+
+Types of relationship/ Cardinality ratio
+
++ 1 : 1	One entity is having direct relationship b/w another entity
+	ex: user table and user profile table
++ 1 : M	One entity is having  relationship b/w multiple/many entity
+	ex: department and students
++ M : 1	many entity is having relationship b/w another entity (reverse perspective of 1:M
+	ex: students and department
++ M : N	many entity is having relationship b/w multiple/many entity
+	ex: course and students
+
+CURD Operations
+---------------
+
+5 major commands
+
+1. DDL - DATA DEFINITION LNG
+	CREATE, ALTER (DROP, TRUNCATE) 
+
+2. DML - DATA MANUPULATION LNG
+	INSERT, UPDATE, DELETE
+
+3. DQL - DATA QUREY LNG
+	SELECT
+
+4. DCL - DATA CONTROL LNG
+
+
+5. TCL - TRANSACTION CONTROL LNG
+

@@ -79,7 +79,7 @@ DATA TYPES:
 
 CONSTRAINS:
 -----------
-Constrains are some set of rules or restriction which are applied or enforced over the columns
+	Constrains are some set of rules or restriction which are applied or enforced over the columns
 
 1. NOT NULL: it is ensuring the column should not contain any null values means every cell must contain a value
 2. UNIQUE: (Distinct) it used to identify the column uniquely.
@@ -90,30 +90,31 @@ Constrains are some set of rules or restriction which are applied or enforced ov
 
 6. DEFAULT: it is a constrain which defined value is automatically updated/ if we are not specifying during insertion time
 
-ENTITY:
-	Anything which is exist in real world is called entity.
+ENTITY: Anything which is exist in real world is called entity.
 
-TYPES OF ENTITY
-1. Physical/ Tangible Entity : ex: Laptop, marker...
-	Entity which are having physical Structure
-2. Conceptual/ Intangible Entity: ex: Internet, Air
-	Entity which are not have any physical Structure
+	TYPES OF ENTITY
+	1. Physical/ Tangible Entity : ex: Laptop, marker...
+		Entity which are having physical Structure
+	2. Conceptual/ Intangible Entity: ex: Internet, Air
+		Entity which are not have any physical Structure
 
 ATTRIBUTES: are properties or characteristics of entity
 
-TYPES OF ATTRIBUTES:
-1. Simple attributes: attribute which can't be divided into Further attributes
-	ex: Age, Phone_No
-2. Composite Attributes:
-	ex: Name, DOB, Address
-3. Single valued Attribute: Attribute which are having Single value
-	ex: Name, Age, Aadhar_no
-4. Multi valued Attribute: Attribute which are having More then one value
-	ex: Phone_no, Emails
-5. Derived Attributes: one attribute derived from another attributes
-	ex: Age is derived from DOB
-6. Key Attributes: attribute which can be identified uniquely
-	ex: ID's
+	TYPES OF ATTRIBUTES:
+
+	1. Simple attributes: attribute which can't be divided into Further attributes
+		ex: Age, Phone_No
+	2. Composite Attributes:
+		ex: Name, DOB, Address
+	3. Single valued Attribute: Attribute which are having Single value
+		ex: Name, Age, Aadhar_no
+	4. Multi valued Attribute: Attribute which are having More then one value
+		ex: Phone_no, Emails
+	5. Derived Attributes: one attribute derived from another attributes
+		ex: Age is derived from DOB
+	6. Key Attributes: attribute which can be identified uniquely
+		ex: ID's
+
 -------------------------------------------------------------------------------------------
 
 mysql> CREATE DATABASE ORG;
@@ -174,19 +175,18 @@ mysql> show create table employee;
 
 -------------------------------------------------------------------------------------------
 
-RELATIONSHIP:
-	It is a association among two or more entities/tables. these relationships are established using primary key and foreign key
+RELATIONSHIP: It is a association among two or more entities/tables. these relationships are established using primary key and foreign key
 
-Types of relationship/ Cardinality ratio
+	Types of relationship/ Cardinality ratio
 
-+ 1 : 1	One entity is having direct relationship b/w another entity
-	ex: user table and user profile table
-+ 1 : M	One entity is having  relationship b/w multiple/many entity
-	ex: department and students
-+ M : 1	many entity is having relationship b/w another entity (reverse perspective of 1:M
-	ex: students and department
-+ M : N	many entity is having relationship b/w multiple/many entity
-	ex: course and students
+	+ 1 : 1	One entity is having direct relationship b/w another entity
+		ex: user table and user profile table
+	+ 1 : M	One entity is having  relationship b/w multiple/many entity
+		ex: department and students
+	+ M : 1	many entity is having relationship b/w another entity (reverse perspective of 1:M
+		ex: students and department
+	+ M : N	many entity is having relationship b/w multiple/many entity
+		ex: course and students
 
 CURD Operations
 ---------------
@@ -493,12 +493,13 @@ Q3. DISPLAY DETAILS OF EMP WHOSE PHONE NUMBER IS NOT AVIALABLE
 	
 + LIKE: USED FOR PATTEREN MATCHING
 
-WE USE WILDCARD CHARECTER '%' AND '_'
+	WE USE WILDCARD CHARECTER '%' AND '_'
 
-'%' ---> MULTIPLE CHARECTER
-'_' --> ONLY ONE CHARECTER
+	'%' ---> MULTIPLE CHARECTER
+	'_' --> ONLY ONE CHARECTER
 
-IF THE PATTERN IT SELF CONTAINS WILD CARD CHARECTER WE USE ESCAPE CHARECTER '\' , '#' , '$' ..... (USED TO REPRESENT THE NEXT CHAR IS NOT WILD CARD CHAR IT'S A NORMAL CHAR
+	IF THE PATTERN IT SELF CONTAINS WILD CARD CHARECTER WE USE ESCAPE CHARECTER '\' , '#' , '$' ..... (USED TO REPRESENT THE NEXT CHAR IS NOT WILD CARD CHAR IT'S A NORMAL CHAR)
+
 	++ SELECT * FROM EMP_LOG WHERE FNAME LIKE "%\%%";
 
 	SELECT * FROM EMP_LOG WHERE FNAME LIKE "%/%%" ESCAPE '/'
@@ -645,7 +646,7 @@ FUNCTIONS: ARE BUILT IN PROGRAMS WHICH ARE USED TO PERFORM SPECIFIC TASKS.
 		SELECT REVERSE('DESTINATION'); //  NOITANITSED
 
 ++ MATH FUNCTIONS: 
-	+++ ROUND(): IT WILL ROUND OF THE VALUE UP TO THE SPECIFIED NUMBER OD DIGITES
+	+++ ROUND(): IT WILL ROUND OF THE VALUE UP TO THE SPECIFIED NUMBER OF DIGITES
 		SELECT ROUND(DECIMAL ,NO_DECIMAL);
 		SELECT ROUND(367.36895267, 3);    //367.369 
 	
@@ -734,7 +735,7 @@ FUNCTIONS: ARE BUILT IN PROGRAMS WHICH ARE USED TO PERFORM SPECIFIC TASKS.
 
 ++ WINDOW FUNCTIONS:
 	WINDOW FUNCTIONS PERFORM  CALCULATION ON SET OF ROWS (WITHOUT COMBINING) AND RETURNS RESULT FOR EVERY ROW
-	OVER --> REPRESENT THE IT IS WINDOW_FUNCTION
+	OVER --> REPRESENT THIS IS WINDOW_FUNCTION
 	
 	SELECT COLUMNS, WINDOW_FUNCTION OVER(PARTITION BY COLUMN_NAME, ORDER BY COULUMN_NAME) FROM TABLE;
 	
@@ -757,7 +758,7 @@ FUNCTIONS: ARE BUILT IN PROGRAMS WHICH ARE USED TO PERFORM SPECIFIC TASKS.
 		+---------+-----------+-------+
 		10 rows in set (0.00 sec)
 
-	+++ RANK(): IT WILL WILL RETURN RANK NUMBER FOR THE ROWS (IT WILL SKIP THE RANK SEQUENCE IS 2 ROW HAVE SAME RANK THAN NEXT RANK IS SKIPED)
+	+++ RANK(): IT WILL RETURN RANK NUMBER FOR THE ROWS (IT WILL SKIP THE RANK SEQUENCE IS 2 ROW HAVE SAME RANK THAN NEXT RANK IS SKIPED)
 		SELECT FNAME, SALARY, RANK() OVER(ORDER BY SALARY DESC) AS RANK_NUM FROM EMP_LOG;
 		+---------+-----------+-------+
 		| FNAME   | SALARY    | SL_NO |
