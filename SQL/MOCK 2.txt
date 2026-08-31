@@ -1,0 +1,46 @@
+1. display the emp name and salary sort name in ascending order
+SELECT FNAME, SALARY FROM EMP_LOG ORDER BY FNAME;
+2. display youngest emp
+SELECT * FROM EMP_LOG ORDER BY E_AGE LIMIT 1;
+
+3. concatenate the emp name with age
+SELECT CONCAT(FNAME, " ", E_AGE) FROM EMP_LOG;
+
+4. find top 3 DEPT base on total salary
+SELECT DEPT_ID, SUM(SALARY) FROM EMP_LOG GROUP BY DEPT_ID ORDER BY SUM(SALARY) DESC LIMIT 3;
+
+5. find dept with height avg salary
+SELECT DEPT_ID, AVG(SALARY) FROM EMP_LOG GROUP BY DEPT_ID ORDER BY AVG(SALARY) DESC LIMIT 1;
+
+6. find emps earing same Rahul
+SELECT * FROM EMP_LOG WHERE SALARY=(SELECT SALARY FROM EMP_LOG WHERE FNAME='RAM');
+
+7. find emp who earn more than avg salary in dep 101
+SELECT * FROM EMP_LOG WHERE SALARY>(SELECT AVG(SALARY) FROM EMP_LOG GROUP BY DEPT_ID HAVING DEPT_ID=101);
+
+8. find emp who have exactly 5 char
+ SELECT FNAME FROM EMP_LOG WHERE FNAME LIKE '_____';
+
+9. find EMP whose dept is not 101 and 103
+SELECT * FROM EMP_LOG WHERE DEPT_ID NOT IN (101, 103);
+
+10. update the salary by 10% from emp 25 1nd 20
+ UPDATE EMP_LOG SET SALARY = CASE
+    -> WHEN E_ID=1 THEN SALARY+(SALARY*10/100)
+    -> WHEN E_ID=2 THEN SALARY+(SALARY*15/100)
+    -> WHEN E_ID=3 THEN SALARY+(SALARY*20/100)
+    -> ELSE SALARY
+    -> END;
+
+11. display 3rd and 4th highest salary from table
+SELECT * FROM EMP_LOG ORDER BY SALARY DESC LIMIT 2 OFFSET 4;
+
+12. display he max salary each dept whose salary should be 65k
+SELECT DEPT_ID, MAX(SALARY) FROM EMP_LOG GROUP BY DEPT_ID HAVING MAX(SALARY)>50000;
+
+13. display youngest  emp from each dept whose age should be less than 21
+14. replace not available in null values in salary
+SELECT FNAME, IFNULL(SALARY, 'NOT AVAILABLE') FROM EMP_LOG;
+
+15. apply dense rank function for salary
+SELECT FNAME, SALARY,DENSE_RANK() OVER(ORDER BY SALARY DESC) AS RANK_NUM FROM EMP_LOG;
