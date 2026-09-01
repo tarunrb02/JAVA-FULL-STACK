@@ -1,5 +1,6 @@
 1. display the emp name and salary sort name in ascending order
 SELECT FNAME, SALARY FROM EMP_LOG ORDER BY FNAME;
+
 2. display youngest emp
 SELECT * FROM EMP_LOG ORDER BY E_AGE LIMIT 1;
 
@@ -38,7 +39,9 @@ SELECT * FROM EMP_LOG ORDER BY SALARY DESC LIMIT 2 OFFSET 4;
 12. display he max salary each dept whose salary should be 65k
 SELECT DEPT_ID, MAX(SALARY) FROM EMP_LOG GROUP BY DEPT_ID HAVING MAX(SALARY)>50000;
 
-13. display youngest  emp from each dept whose age should be less than 21
+13. display youngest emp from each dept whose age should be less than 21
+SELECT * FROM EMP_LOG E WHERE E_AGE=(SELECT MIN(E_AGE) FROM EMP_LOG WHERE DEPT_ID=E.DEPT_ID AND E_AGE<24);
+
 14. replace not available in null values in salary
 SELECT FNAME, IFNULL(SALARY, 'NOT AVAILABLE') FROM EMP_LOG;
 
