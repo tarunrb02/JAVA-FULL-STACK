@@ -219,7 +219,7 @@ Note: when visibility is to hidden, space for the element is reserved but if dis
 	flex-grow : how much a flex item will grow relative to the rest of the flex items if space is available
 	flex-shrink : how much a flex item will shrink relative to the rest of the flex items if space is available
 
-+ Media Queries:a core feature of web design that allow you to apply different styles based on a device's characteristics, such as viewport width, orientation, or user preferences.
++ Media Queries: a core feature of web design that allow you to apply different styles based on a device's characteristics, such as viewport width, orientation, or user preferences.
 
 	@media(width: _ px){
 		style
