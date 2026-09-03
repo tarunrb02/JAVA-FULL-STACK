@@ -2,7 +2,7 @@ package hashCode;
 
 import java.util.Objects;
 
-public class Student {
+public class Student extends Object {
 	int id;
 	String name;
 	
@@ -11,10 +11,10 @@ public class Student {
 		this.name=name;
 	}
 	
-//	@Override
-//	public int hashCode() {
-//		return Objects.hash(id,name);
-//	}
+	@Override
+	public int hashCode() {
+		return Objects.hash(id,name);
+	}
 	
 	public static void main(String[] args) {
 		Student s1=new Student(1,"tarun");

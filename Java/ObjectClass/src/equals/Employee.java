@@ -22,7 +22,6 @@ public class Employee {
 	public boolean equals(Employee e) {
 		return (this.id==e.id && this.name.equals(e.name));
 	}
-	s
 	public static void main(String[] args) {
 		Employee e1=new Employee(1, "Tarun");
 		Employee e2=new Employee(1, "Tarun");

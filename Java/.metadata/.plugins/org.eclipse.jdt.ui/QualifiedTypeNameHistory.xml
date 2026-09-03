@@ -3,6 +3,6 @@
     <fullyQualifiedTypeName name="NonStatic.Student"/>
     <fullyQualifiedTypeName name="Static.Student"/>
     <fullyQualifiedTypeName name="java.lang.System"/>
-    <fullyQualifiedTypeName name="java.util.Arrays"/>
     <fullyQualifiedTypeName name="java.lang.StringIndexOutOfBoundsException"/>
+    <fullyQualifiedTypeName name="java.util.Arrays"/>
 </qualifiedTypeNameHistroy>
