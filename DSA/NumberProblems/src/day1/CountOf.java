@@ -13,6 +13,12 @@ public class CountOf {
 			n=n/10;
 		}
 		System.out.println(count);
+		sc.close();
+		//sum even digits
+		//sum add digits
+		//find largest among 2
+		//count even digits
+		//count odd digits
 	}
 
 }
