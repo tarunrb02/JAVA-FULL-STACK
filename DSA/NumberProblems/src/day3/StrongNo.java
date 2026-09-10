@@ -1,6 +1,7 @@
 package day3;
 
 public class StrongNo {
+	//sum of factorial of digits == number
 	static int factoril(int a) {
 		int fact=1;
 		for(int i=2;i<=a;i++)
