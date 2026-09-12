@@ -17,6 +17,10 @@ console.log("Multiplication: " + (a*b)); //Multiplication: 50
 console.log("Division: " + (a/b));   //Division: 2
 console.log("Modulus: " + (a%b)); //Modulus: 0
 console.log("Exponentiation: " + (a**b)); //Exponentiation: 100000
+console.log(5/0); //Infinity
+console.log(typeof (10)); //number
+console.log("Typeof Infinity: " + typeof (5/0)); //Typeof Infinity: number
+console.log();
 
 //---------logical operators------------
 let x=true, y=false;
@@ -59,6 +63,7 @@ console.log("Bitwise NOT: " + (~p)); //Bitwise NOT: -6
 console.log("Left Shift: " + (p << 1)); //Left Shift: 10
 console.log("Right Shift: " + (p >> 1)); //Right Shift: 2
 
+
 //---------unary operators------------
 let r=10;
 console.log("Unary Plus: " + (+r)); //Unary Plus: 10
@@ -79,3 +84,9 @@ let fullName=firstName + " " + lastName;
 console.log("Full Name: " + fullName); //Full Name: John Doe
 let greeting=`Hello ${firstName} ${lastName}`; //template literal backticks important instead of quotes in development
 console.log(greeting); //Hello John Doe
+
+
+
+// -------------------practice--------------------
+let a1=10, b1=20, c1=20;
+console.log(a1>b1 && a1>c1 ? a1 : b1>c1 ? b1 : c1); //20
