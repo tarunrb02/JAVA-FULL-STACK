@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student registration</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1>Student registration form</h1>
+    <form action="user-reg" method="post">
+        <label for="name">Name</label>
+        <input type="text" id="name" name="name" required><br><br>
+
+        <!-- <label for="email">email</label>
+        <input type="text" id="email" name="email" required> -->
+        
+        <label for="rollno">roll no</label>
+        <input type="text" id="rollno" name="rollno" required><br><br>
+        
+        <label for="course">Courses:</label>
+        <select name="course" id="course">
+            <option value="">Select option</option>
+            <option value="java">java</option>
+            <option value="python">python</option>
+            <option value="sql">sql</option>
+            <option value="webdev">web dev</option>
+        </select><br><br>
+        
+        <label for="marks">marks</label>
+        <input type="text" id="marks" name="marks" required><br><br>
+        
+        <button type="submit" class="btn btn-primary">Submit</button>
+        
+    </form>
+    <br>
+    <a href="students"> view all students</a>
+</body>
+</html>
