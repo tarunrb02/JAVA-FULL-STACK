@@ -2,7 +2,7 @@ package list;
 
 import java.util.Objects;
 
-public class Student {
+public class Student implements Comparable<Student>{
 	int eid;
 	String name;
 	String email;
@@ -30,6 +30,11 @@ public class Student {
 			return false;
 		Student other = (Student) obj;
 		return eid == other.eid && Objects.equals(email, other.email) && Objects.equals(name, other.name);
+	}
+	@Override
+	public int compareTo(Student o) {
+		// TODO Auto-generated method stub
+		return this.eid-o.eid;
 	}
 	
 	

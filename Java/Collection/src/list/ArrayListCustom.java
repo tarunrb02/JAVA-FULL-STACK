@@ -1,6 +1,8 @@
 package list;
 
 import java.util.ArrayList;
+//import java.util.Collections;
+import java.util.Collections;
 
 public class ArrayListCustom {
 	public static void main(String[] args) {
@@ -13,8 +15,15 @@ public class ArrayListCustom {
 		list.add(new Student(6, "affan", "affan268@gamil.com"));
 		list.add(new Student(5, "mani", "mani135@gamil.com"));
 
-		Student s1 = new Student(2, "sagar", "sagar256@gamil.com");
+		
 
+		Collections.sort(list);
+		System.out.println("==========after sorting==========");
+		for(Student s:list)
+			System.out.println(s);
+
+		
+		Student s1 = new Student(2, "sagar", "sagar256@gamil.com");
 		System.out.println("==========before==========");
 		for(Student s:list)
 			System.out.println(s);
@@ -83,6 +92,8 @@ public class ArrayListCustom {
 		System.out.println("==========after removing based on eid==========");
 		for(Student s:list)
 			System.out.println(s);
+		
+		
 	}
 
 }

@@ -9,6 +9,8 @@ const grt = function() {
     console.log("Hello from a function expression!");
 };
 grt();
+console.log(typeof grt);
+
 
 // 3. Arrow function
 const arrowGreet = () => {
@@ -37,6 +39,16 @@ function square(num) {
     return num * num;
 }
 console.log("Square: " + square(5));
+
+// 8.Higher-order function
+function applyOperation(a, b, operation) {
+    return operation(a, b);
+}
+// 9. Anonymous function as a callback
+const result = applyOperation(10, 5, function(x, y) {
+    return x - y;
+});
+console.log("Result of the operation: " + result);
 
 // 7. Function with rest parameters
 function sumAll(...numbers) {
