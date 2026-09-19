@@ -21,13 +21,41 @@ for(let i=0;i<colors.length;i++){
 console.log();
 
 //foreach
-colors.forEach(a=>{
+colors.forEach((a)=>{
     console.log(a);    
 });
-
 console.log();
 
-//forof
+let numbers=[1,2,3,4,5];
+console.log(numbers);
+
+numbers.forEach((a,i)=>{
+    console.log(a+3);
+    console.log("index"+i);
+        
+});
+console.log();
+
+//map function
+let newNumbers=numbers.map((a, i)=>{
+    return a+3;
+});
+console.log(newNumbers);
+console.log();
+
+//filter function
+let evenNumbers=numbers.filter((a)=>{ //filter returns a new array with elements that pass the test implemented by the provided function
+    return a%2==0; //returns true if a is even
+});
+console.log(evenNumbers);
+
+//reduce function
+let sum=numbers.reduce((acc, a)=>{ //acc is accumulator, a is current value
+    return acc+a; //returns the sum of accumulator and current value back to accumulator for next iteration
+},0); //0 is initial value of accumulator
+console.log(sum);
+
+//for of
 for(let a of arr){
     console.log(a);
 };
@@ -40,8 +68,11 @@ for(let a of arr){
 4. indexOf(); //get index
 5. join(); //join all elements in to String
 6. slice(); // extract part
-7. splice();
-8. includes();
+7. splice(); // remove or replace elements
+8. includes(); // check if element is present
+9. reverse();// reverse the array
+10. sort(); // sort the array
+11. concat(); // merge two arrays 
 */
 
 let cart=[];
