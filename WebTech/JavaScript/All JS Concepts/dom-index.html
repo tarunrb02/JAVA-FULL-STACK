@@ -64,7 +64,19 @@
       const allListItems = document.querySelectorAll("li"); //Returns a NodeList of all matching elements.
       console.log(allListItems.length); // Output: 3
 
-      
+      //event.target vs event.currentTarget
+      const list = document.getElementById("list");
+      list.addEventListener("click", function (event) {
+        console.log("event.target:", event.target); // The element that was clicked
+        console.log("event.currentTarget:", event.currentTarget); // The element that the event listener is attached to
+      });
+
+      localStorage.setItem("name", "John Doe"); //localStorage is a web storage object that allows you to store key-value pairs in the browser. It is similar to cookies, but it has a larger storage capacity and is more secure. localStorage is accessible only from the same origin (protocol, host, and port) and persists even after the browser is closed. The data stored in localStorage can be retrieved using the getItem() method and removed using the removeItem() method. The data stored in localStorage is stored as strings, so if you want to store objects or arrays, you need to convert them to strings using JSON.stringify() before storing them and parse them back to objects or arrays using JSON.parse() when retrieving them.
+      const name = localStorage.getItem("name");//getItem() method is used to retrieve the value of a key from localStorage. It takes the key as an argument and returns the value associated with that key. If the key does not exist, it returns null.
+      console.log("Name from localStorage:", name);
+      localStorage.removeItem("name"); // removeItem() method is used to remove a key-value pair from localStorage. It takes the key as an argument and removes the key-value pair associated with that key.
+      const nameAfterRemoval = localStorage.getItem("name");
+      console.log("Name after removal from localStorage:", nameAfterRemoval);
     </script>
   </body>
 </html>

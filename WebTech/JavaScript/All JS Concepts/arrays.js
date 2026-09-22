@@ -106,6 +106,25 @@ console.log("new cart: ",newCart);
 cart.splice(1,1);// removes 1 item from index 1
 console.log("cart item: ",cart);
 
+// let numbers=[1,2,3,4,5];
+//map()
+let squaredNumbers=numbers.map((a)=>{
+    return a*a;
+});
+console.log("squared numbers: ",squaredNumbers);
+
+//filter()
+let oddNumbers=numbers.filter((a)=>{
+    return a%2!=0;
+});
+console.log("odd numbers: ",oddNumbers);
+
+//reduce()
+let product=numbers.reduce((acc, a)=>{
+    return acc*a;
+},1);
+console.log("product: ",product);
+
 //Multidimensional arrays
 let matrix=[
     [1,2,3],
@@ -116,4 +135,30 @@ console.log(matrix);
 
 //Array destructuring
 let [a,b,c]=colors;
+let [d,e,f]=colors; // we can't store random index values in array destructuring, we can only store values in order of the array
+
+// ...rest operator
+let [x,y,...rest]=colors;
+console.log(rest); // rest will store the remaining values in the array
+console.log(typeof rest); // typeof rest will return object because rest is an array and arrays are objects in javascript
+
+console.log(d,e,f);
+
 console.log(a,b,c);
+
+// spread operator
+// spread operator is used to spread the elements of an array or object into a new array or object. It is denoted by three dots (...).
+let newColors=[...colors,"black","white"];
+console.log(newColors);
+
+//difference between rest and spread operator
+
+//find() returns the first element in the array that satisfies the provided testing function. If no values satisfy the testing function, undefined is returned.
+const people = [
+    { name: "Alice", age: 25 },
+    { name: "Bob", age: 30 },
+    { name: "Charlie", age: 35 }
+];
+
+const person = people.find((p) => p.age === 30).name;
+console.log(person); // Output: { name: "Bob", age: 30 }    
