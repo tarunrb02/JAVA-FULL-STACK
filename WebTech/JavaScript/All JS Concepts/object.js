@@ -8,6 +8,7 @@ obj3.name="John";
 console.log(typeof obj3);
 
 let obj2 = new Object(); // object constructor syntax
+
 const person = {
   firstName: "John",
   lastName: "Doe",
@@ -83,6 +84,13 @@ car2.getCarInfo(); // Output: Toyota Camry (2020)
 // console.log(car.getCarInfo());
 
 
+
+// const person = {
+//   firstName: "John",
+//   lastName: "Doe",
+//   age: 30
+// };
+
 // Object destructuring
 const { firstName, lastName } = person;
 console.log(firstName); 
@@ -102,3 +110,35 @@ Object.keys(car).forEach(key => { // Looping through object properties using Obj
 Object.values(person).forEach(value => {  // Looping through object values using Object.values()
     console.log(value);
 }); 
+
+Object.entries(person).forEach(([key, value]) => {  // Looping through object entries using Object.entries()
+    console.log(key + ": " + value);
+});
+
+//methods to get keys and values of an object
+console.log(Object.keys(car));
+console.log(Object.values(car));
+console.log(Object.entries(car));
+
+//copying objects
+//shallow copy of an object
+const carCopy = {...car};//shallow copy of car object using spread operator, it will create a new object with the same properties as car object
+
+carCopy.make = "Honda"; // changing the make property of carCopy object
+console.log(car);
+console.log(carCopy);
+
+//deep copy of an object
+
+//for nested objects, we can use JSON.parse(JSON.stringify(obj)) to create a deep copy of the object
+const studentCopy = JSON.parse(JSON.stringify(student));
+console.log(studentCopy);
+
+const studentCopy2 = structuredClone(student);
+console.log(studentCopy2);
+
+//structuredClone is a built-in method in JavaScript that creates a deep copy of an object, including nested objects and arrays. It is a more efficient and reliable way to clone objects compared to using JSON.parse(JSON.stringify(obj)), as it can handle more complex data types and circular references.
+
+//shallow copy vs deep copy
+//shallow copy creates a new object with the same properties as the original object, but if the original object has nested objects, the nested objects are still referenced in the new object. This means that if we change a property of a nested object in the new object, it will also change in the original object.
+//deep copy creates a new object with the same properties as the original object, and all nested objects are also copied, not just referenced. This means that if we change a property of a nested object in the new object, it will not affect the original object.

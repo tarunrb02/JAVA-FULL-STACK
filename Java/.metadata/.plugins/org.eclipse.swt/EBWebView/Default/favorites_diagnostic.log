@@ -882,3 +882,103 @@
 2026-09-21 05:32:12.177: [INFO] BookmarksLoadDropped droppedNodes=0
 2026-09-21 05:32:12.177: [INFO] BookmarksSnapshot Startup total=0 bar=0 other=0 mobile=0 showBar=0 showBarNTP=1
 2026-09-21 05:35:48.890: [INFO] BookmarksSnapshot Shutdown total=0 bar=0 other=0 mobile=0 showBar=0 showBarNTP=1
+2026-09-24 07:18:17.875: [INFO] CurrentProfilePath: C:\Users\tarun\Desktop\Destinetion Course\Java\.metadata\.plugins\org.eclipse.swt\EBWebView\Default
+2026-09-24 07:18:17.875: [INFO] Profiles total count: 1
+2026-09-24 07:18:17.875: [INFO] Profile: name=Profile 1 path=C:\Users\tarun\Desktop\Destinetion Course\Java\.metadata\.plugins\org.eclipse.swt\EBWebView\Default lastActive=2026-09-21T05:35:48.627Z
+2026-09-24 07:18:17.875: [INFO] LastUsedProfileDir: C:\Users\tarun\Desktop\Destinetion Course\Java\.metadata\.plugins\org.eclipse.swt\EBWebView\Default
+2026-09-24 07:18:17.875: [INFO] MostRecentlyActiveProfile: name=Profile 1 path=C:\Users\tarun\Desktop\Destinetion Course\Java\.metadata\.plugins\org.eclipse.swt\EBWebView\Default lastActive=2026-09-21T05:35:48.627Z
+2026-09-24 07:18:17.875: [INFO] OnDoneLoading sync enabled: 0
+2026-09-24 07:18:17.875: [INFO] BookmarkModelLoaded, ids_reassigned: 0
+2026-09-24 07:18:17.875: [INFO] BookmarksLoadDropped droppedNodes=0
+2026-09-24 07:18:17.875: [INFO] BookmarksSnapshot Startup total=0 bar=0 other=0 mobile=0 showBar=0 showBarNTP=1
+2026-09-24 07:18:23.291: [INFO] BookmarksSnapshot Shutdown total=0 bar=0 other=0 mobile=0 showBar=0 showBarNTP=1
+2026-09-24 07:40:12.778: [INFO] CurrentProfilePath: C:\Users\tarun\Desktop\Destinetion Course\Java\.metadata\.plugins\org.eclipse.swt\EBWebView\Default
+2026-09-24 07:40:12.778: [INFO] Profiles total count: 1
+2026-09-24 07:40:12.778: [INFO] Profile: name=Profile 1 path=C:\Users\tarun\Desktop\Destinetion Course\Java\.metadata\.plugins\org.eclipse.swt\EBWebView\Default lastActive=2026-09-21T05:35:48.627Z
+2026-09-24 07:40:12.778: [INFO] LastUsedProfileDir: C:\Users\tarun\Desktop\Destinetion Course\Java\.metadata\.plugins\org.eclipse.swt\EBWebView\Default
+2026-09-24 07:40:12.778: [INFO] MostRecentlyActiveProfile: name=Profile 1 path=C:\Users\tarun\Desktop\Destinetion Course\Java\.metadata\.plugins\org.eclipse.swt\EBWebView\Default lastActive=2026-09-21T05:35:48.627Z
+2026-09-24 07:40:12.778: [INFO] OnDoneLoading sync enabled: 0
+2026-09-24 07:40:12.778: [INFO] BookmarkModelLoaded, ids_reassigned: 0
+2026-09-24 07:40:12.778: [INFO] BookmarksLoadDropped droppedNodes=0
+2026-09-24 07:40:12.778: [INFO] BookmarksSnapshot Startup total=0 bar=0 other=0 mobile=0 showBar=0 showBarNTP=1
+2026-09-24 07:40:43.451: [INFO] BookmarksSnapshot Shutdown total=0 bar=0 other=0 mobile=0 showBar=0 showBarNTP=1
+2026-09-25 05:32:52.853: [INFO] CurrentProfilePath: C:\Users\tarun\Desktop\Destinetion Course\Java\.metadata\.plugins\org.eclipse.swt\EBWebView\Default
+2026-09-25 05:32:52.853: [INFO] Profiles total count: 1
+2026-09-25 05:32:52.854: [INFO] Profile: name=Profile 1 path=C:\Users\tarun\Desktop\Destinetion Course\Java\.metadata\.plugins\org.eclipse.swt\EBWebView\Default lastActive=2026-09-21T05:35:48.627Z
+2026-09-25 05:32:52.854: [INFO] LastUsedProfileDir: C:\Users\tarun\Desktop\Destinetion Course\Java\.metadata\.plugins\org.eclipse.swt\EBWebView\Default
+2026-09-25 05:32:52.854: [INFO] MostRecentlyActiveProfile: name=Profile 1 path=C:\Users\tarun\Desktop\Destinetion Course\Java\.metadata\.plugins\org.eclipse.swt\EBWebView\Default lastActive=2026-09-21T05:35:48.627Z
+2026-09-25 05:32:52.854: [INFO] OnDoneLoading sync enabled: 0
+2026-09-25 05:32:52.854: [INFO] BookmarkModelLoaded, ids_reassigned: 0
+2026-09-25 05:32:52.854: [INFO] BookmarksLoadDropped droppedNodes=0
+2026-09-25 05:32:52.854: [INFO] BookmarksSnapshot Startup total=0 bar=0 other=0 mobile=0 showBar=0 showBarNTP=1
+2026-09-25 05:33:20.512: [INFO] BookmarksSnapshot Shutdown total=0 bar=0 other=0 mobile=0 showBar=0 showBarNTP=1
+2026-09-25 07:20:37.479: [INFO] CurrentProfilePath: C:\Users\tarun\Desktop\Destinetion Course\Java\.metadata\.plugins\org.eclipse.swt\EBWebView\Default
+2026-09-25 07:20:37.479: [INFO] Profiles total count: 1
+2026-09-25 07:20:37.479: [INFO] Profile: name=Profile 1 path=C:\Users\tarun\Desktop\Destinetion Course\Java\.metadata\.plugins\org.eclipse.swt\EBWebView\Default lastActive=2026-09-21T05:35:48.627Z
+2026-09-25 07:20:37.479: [INFO] LastUsedProfileDir: C:\Users\tarun\Desktop\Destinetion Course\Java\.metadata\.plugins\org.eclipse.swt\EBWebView\Default
+2026-09-25 07:20:37.479: [INFO] MostRecentlyActiveProfile: name=Profile 1 path=C:\Users\tarun\Desktop\Destinetion Course\Java\.metadata\.plugins\org.eclipse.swt\EBWebView\Default lastActive=2026-09-21T05:35:48.627Z
+2026-09-25 07:20:37.479: [INFO] OnDoneLoading sync enabled: 0
+2026-09-25 07:20:37.479: [INFO] BookmarkModelLoaded, ids_reassigned: 0
+2026-09-25 07:20:37.479: [INFO] BookmarksLoadDropped droppedNodes=0
+2026-09-25 07:20:37.479: [INFO] BookmarksSnapshot Startup total=0 bar=0 other=0 mobile=0 showBar=0 showBarNTP=1
+2026-09-25 08:36:48.976: [INFO] BookmarksSnapshot Shutdown total=0 bar=0 other=0 mobile=0 showBar=0 showBarNTP=1
+2026-09-26 05:20:40.337: [INFO] CurrentProfilePath: C:\Users\tarun\Desktop\Destinetion Course\Java\.metadata\.plugins\org.eclipse.swt\EBWebView\Default
+2026-09-26 05:20:40.337: [INFO] Profiles total count: 1
+2026-09-26 05:20:40.337: [INFO] Profile: name=Profile 1 path=C:\Users\tarun\Desktop\Destinetion Course\Java\.metadata\.plugins\org.eclipse.swt\EBWebView\Default lastActive=2026-09-25T08:20:35.361Z
+2026-09-26 05:20:40.337: [INFO] LastUsedProfileDir: C:\Users\tarun\Desktop\Destinetion Course\Java\.metadata\.plugins\org.eclipse.swt\EBWebView\Default
+2026-09-26 05:20:40.337: [INFO] MostRecentlyActiveProfile: name=Profile 1 path=C:\Users\tarun\Desktop\Destinetion Course\Java\.metadata\.plugins\org.eclipse.swt\EBWebView\Default lastActive=2026-09-25T08:20:35.361Z
+2026-09-26 05:20:40.337: [INFO] OnDoneLoading sync enabled: 0
+2026-09-26 05:20:40.337: [INFO] BookmarkModelLoaded, ids_reassigned: 0
+2026-09-26 05:20:40.337: [INFO] BookmarksLoadDropped droppedNodes=0
+2026-09-26 05:20:40.337: [INFO] BookmarksSnapshot Startup total=0 bar=0 other=0 mobile=0 showBar=0 showBarNTP=1
+2026-09-26 05:21:15.295: [INFO] BookmarksSnapshot Shutdown total=0 bar=0 other=0 mobile=0 showBar=0 showBarNTP=1
+2026-09-26 05:21:23.740: [INFO] CurrentProfilePath: C:\Users\tarun\Desktop\Destinetion Course\Java\.metadata\.plugins\org.eclipse.swt\EBWebView\Default
+2026-09-26 05:21:23.740: [INFO] Profiles total count: 1
+2026-09-26 05:21:23.740: [INFO] Profile: name=Profile 1 path=C:\Users\tarun\Desktop\Destinetion Course\Java\.metadata\.plugins\org.eclipse.swt\EBWebView\Default lastActive=2026-09-26T05:21:12.106Z
+2026-09-26 05:21:23.740: [INFO] LastUsedProfileDir: C:\Users\tarun\Desktop\Destinetion Course\Java\.metadata\.plugins\org.eclipse.swt\EBWebView\Default
+2026-09-26 05:21:23.740: [INFO] MostRecentlyActiveProfile: name=Profile 1 path=C:\Users\tarun\Desktop\Destinetion Course\Java\.metadata\.plugins\org.eclipse.swt\EBWebView\Default lastActive=2026-09-26T05:21:12.106Z
+2026-09-26 05:21:23.740: [INFO] OnDoneLoading sync enabled: 0
+2026-09-26 05:21:23.740: [INFO] BookmarkModelLoaded, ids_reassigned: 0
+2026-09-26 05:21:23.740: [INFO] BookmarksLoadDropped droppedNodes=0
+2026-09-26 05:21:23.740: [INFO] BookmarksSnapshot Startup total=0 bar=0 other=0 mobile=0 showBar=0 showBarNTP=1
+2026-09-26 05:26:22.168: [INFO] BookmarksSnapshot Shutdown total=0 bar=0 other=0 mobile=0 showBar=0 showBarNTP=1
+2026-09-26 07:07:51.157: [INFO] CurrentProfilePath: C:\Users\tarun\Desktop\Destinetion Course\Java\.metadata\.plugins\org.eclipse.swt\EBWebView\Default
+2026-09-26 07:07:51.157: [INFO] Profiles total count: 1
+2026-09-26 07:07:51.157: [INFO] Profile: name=Profile 1 path=C:\Users\tarun\Desktop\Destinetion Course\Java\.metadata\.plugins\org.eclipse.swt\EBWebView\Default lastActive=2026-09-26T05:21:12.106Z
+2026-09-26 07:07:51.157: [INFO] LastUsedProfileDir: C:\Users\tarun\Desktop\Destinetion Course\Java\.metadata\.plugins\org.eclipse.swt\EBWebView\Default
+2026-09-26 07:07:51.157: [INFO] MostRecentlyActiveProfile: name=Profile 1 path=C:\Users\tarun\Desktop\Destinetion Course\Java\.metadata\.plugins\org.eclipse.swt\EBWebView\Default lastActive=2026-09-26T05:21:12.106Z
+2026-09-26 07:07:51.157: [INFO] OnDoneLoading sync enabled: 0
+2026-09-26 07:07:51.157: [INFO] BookmarkModelLoaded, ids_reassigned: 0
+2026-09-26 07:07:51.157: [INFO] BookmarksLoadDropped droppedNodes=0
+2026-09-26 07:07:51.157: [INFO] BookmarksSnapshot Startup total=0 bar=0 other=0 mobile=0 showBar=0 showBarNTP=1
+2026-09-26 07:07:54.452: [INFO] BookmarksSnapshot Shutdown total=0 bar=0 other=0 mobile=0 showBar=0 showBarNTP=1
+2026-09-26 08:07:28.052: [INFO] CurrentProfilePath: C:\Users\tarun\Desktop\Destinetion Course\Java\.metadata\.plugins\org.eclipse.swt\EBWebView\Default
+2026-09-26 08:07:28.052: [INFO] Profiles total count: 1
+2026-09-26 08:07:28.052: [INFO] Profile: name=Profile 1 path=C:\Users\tarun\Desktop\Destinetion Course\Java\.metadata\.plugins\org.eclipse.swt\EBWebView\Default lastActive=2026-09-26T05:21:12.106Z
+2026-09-26 08:07:28.052: [INFO] LastUsedProfileDir: C:\Users\tarun\Desktop\Destinetion Course\Java\.metadata\.plugins\org.eclipse.swt\EBWebView\Default
+2026-09-26 08:07:28.052: [INFO] MostRecentlyActiveProfile: name=Profile 1 path=C:\Users\tarun\Desktop\Destinetion Course\Java\.metadata\.plugins\org.eclipse.swt\EBWebView\Default lastActive=2026-09-26T05:21:12.106Z
+2026-09-26 08:07:28.052: [INFO] OnDoneLoading sync enabled: 0
+2026-09-26 08:07:28.052: [INFO] BookmarkModelLoaded, ids_reassigned: 0
+2026-09-26 08:07:28.052: [INFO] BookmarksLoadDropped droppedNodes=0
+2026-09-26 08:07:28.052: [INFO] BookmarksSnapshot Startup total=0 bar=0 other=0 mobile=0 showBar=0 showBarNTP=1
+2026-09-26 08:07:32.308: [INFO] BookmarksSnapshot Shutdown total=0 bar=0 other=0 mobile=0 showBar=0 showBarNTP=1
+2026-09-26 08:07:34.188: [INFO] CurrentProfilePath: C:\Users\tarun\Desktop\Destinetion Course\Java\.metadata\.plugins\org.eclipse.swt\EBWebView\Default
+2026-09-26 08:07:34.188: [INFO] Profiles total count: 1
+2026-09-26 08:07:34.188: [INFO] Profile: name=Profile 1 path=C:\Users\tarun\Desktop\Destinetion Course\Java\.metadata\.plugins\org.eclipse.swt\EBWebView\Default lastActive=2026-09-26T05:21:12.106Z
+2026-09-26 08:07:34.188: [INFO] LastUsedProfileDir: C:\Users\tarun\Desktop\Destinetion Course\Java\.metadata\.plugins\org.eclipse.swt\EBWebView\Default
+2026-09-26 08:07:34.188: [INFO] MostRecentlyActiveProfile: name=Profile 1 path=C:\Users\tarun\Desktop\Destinetion Course\Java\.metadata\.plugins\org.eclipse.swt\EBWebView\Default lastActive=2026-09-26T05:21:12.106Z
+2026-09-26 08:07:34.188: [INFO] OnDoneLoading sync enabled: 0
+2026-09-26 08:07:34.188: [INFO] BookmarkModelLoaded, ids_reassigned: 0
+2026-09-26 08:07:34.188: [INFO] BookmarksLoadDropped droppedNodes=0
+2026-09-26 08:07:34.188: [INFO] BookmarksSnapshot Startup total=0 bar=0 other=0 mobile=0 showBar=0 showBarNTP=1
+2026-09-26 08:08:16.479: [INFO] BookmarksSnapshot Shutdown total=0 bar=0 other=0 mobile=0 showBar=0 showBarNTP=1
+2026-09-26 08:08:21.014: [INFO] CurrentProfilePath: C:\Users\tarun\Desktop\Destinetion Course\Java\.metadata\.plugins\org.eclipse.swt\EBWebView\Default
+2026-09-26 08:08:21.014: [INFO] Profiles total count: 1
+2026-09-26 08:08:21.014: [INFO] Profile: name=Profile 1 path=C:\Users\tarun\Desktop\Destinetion Course\Java\.metadata\.plugins\org.eclipse.swt\EBWebView\Default lastActive=2026-09-26T05:21:12.106Z
+2026-09-26 08:08:21.014: [INFO] LastUsedProfileDir: C:\Users\tarun\Desktop\Destinetion Course\Java\.metadata\.plugins\org.eclipse.swt\EBWebView\Default
+2026-09-26 08:08:21.014: [INFO] MostRecentlyActiveProfile: name=Profile 1 path=C:\Users\tarun\Desktop\Destinetion Course\Java\.metadata\.plugins\org.eclipse.swt\EBWebView\Default lastActive=2026-09-26T05:21:12.106Z
+2026-09-26 08:08:21.014: [INFO] OnDoneLoading sync enabled: 0
+2026-09-26 08:08:21.014: [INFO] BookmarkModelLoaded, ids_reassigned: 0
+2026-09-26 08:08:21.014: [INFO] BookmarksLoadDropped droppedNodes=0
+2026-09-26 08:08:21.014: [INFO] BookmarksSnapshot Startup total=0 bar=0 other=0 mobile=0 showBar=0 showBarNTP=1
+2026-09-26 08:35:44.111: [INFO] BookmarksSnapshot Shutdown total=0 bar=0 other=0 mobile=0 showBar=0 showBarNTP=1

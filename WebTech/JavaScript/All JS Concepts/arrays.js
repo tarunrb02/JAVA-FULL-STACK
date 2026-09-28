@@ -117,6 +117,8 @@ console.log("squared numbers: ",squaredNumbers);
 let oddNumbers=numbers.filter((a)=>{
     return a%2!=0;
 });
+
+// let oddNumbers=numbers.filter(a=> a%2!=0); // we can also write it like this, if we have only one statement in the function, we can omit the return statement and the curly braces
 console.log("odd numbers: ",oddNumbers);
 
 //reduce()
@@ -134,6 +136,7 @@ let matrix=[
 console.log(matrix);
 
 //Array destructuring
+//destructuring is a way to unpack values from arrays, or properties from objects, into distinct variables.
 let [a,b,c]=colors;
 let [d,e,f]=colors; // we can't store random index values in array destructuring, we can only store values in order of the array
 
@@ -151,7 +154,13 @@ console.log(a,b,c);
 let newColors=[...colors,"black","white"];
 console.log(newColors);
 
+// let numbers=[1,2,3,4,5];
+let newNumbers2=[...numbers,6,7,8];
+console.log(newNumbers2);
+
 //difference between rest and spread operator
+// rest operator is used to collect the remaining elements of an array or object into a new array or object. It is denoted by three dots (...).
+// spread operator is used to spread the elements of an array or object into a new array or object. It is denoted by three dots (...).
 
 //find() returns the first element in the array that satisfies the provided testing function. If no values satisfy the testing function, undefined is returned.
 const people = [
@@ -161,4 +170,4 @@ const people = [
 ];
 
 const person = people.find((p) => p.age === 30).name;
-console.log(person); // Output: { name: "Bob", age: 30 }    
+console.log(person); // Output: { name: "Bob", age: 30 }

@@ -1,15 +1,15 @@
 Q1. DISPLAY TOP 5 SALARYES FROM THE TABLE 
-mysql> SELECT FNAME, SALARY FROM EMP_LOG ORDER BY SALARY LIMIT 5;
-+-------+-----------+
-| FNAME | SALARY    |
-+-------+-----------+
-| RI*A  | 30000.000 |
-| ROHIT | 30000.000 |
-| ROHIT | 40000.000 |
-| ARUN  | 40000.000 |
-| R@M   | 45000.000 |
-+-------+-----------+
-5 rows in set (0.00 sec)
+mysql> SELECT FNAME, SALARY FROM EMP_LOG ORDER BY SALARY DESC LIMIT 5;
++---------+-----------+
+| FNAME   | SALARY    |
++---------+-----------+
+| S$HANA  | 70000.000 |
+| varun   | 70000.000 |
+| PRIT#AM | 50000.000 |
+| TA%RUN  | 50000.000 |
+| R@M     | 41400.000 |
++---------+-----------+
+5 rows in set (0.06 sec)
 
 Q2. USING CASE GIVE INCRIMENT BY 20% FOR EMPLOYEES WHOS SALARYS IS NBLEOW 40K
 mysql> UPDATE EMP_LOG SET SALARY = CASE
