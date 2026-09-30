@@ -119,3 +119,13 @@ let image=document.querySelector("img");
 let btn=document.querySelector("#btn");
 
 btn.addEventListener("click",toggleImage); //it will call the toggleImage function when the button is clicked
+
+//!event delegation is a technique in which we add an event listener to a parent element instead of adding it to each child element. This is useful when we have a large number of child elements and we want to avoid adding event listeners to each one of them. Instead, we can add a single event listener to the parent element and use the event object to determine which child element was clicked.
+
+let parentDiv=document.getElementById("parent");
+
+parentDiv.addEventListener("click", (e) => {
+    if (e.target.tagName === "BUTTON") {
+        console.log(`Button clicked: ${e.target.innerText}`);
+    }
+});

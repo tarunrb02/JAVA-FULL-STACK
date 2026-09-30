@@ -15,7 +15,6 @@ public class Frequency {
 					visited[i]=true;
 				}
 			}
-			if()
 			System.out.println(a[i]+" count is " +count);
 		}
 //		HashMap<Integer, Integer > map = new HashMap<>();

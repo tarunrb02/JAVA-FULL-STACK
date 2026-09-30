@@ -18,14 +18,21 @@ public class ClientApp {
 				+"\n 5. Delete a client"
 				+"\n 6. Exit");
 		int choice=sc.nextInt();
+		ClientDAO dao = new ClientDAO();
 		
-		Integer
 		switch (choice) {
-			case 1 ->new ClientDAO().addClient();
-			
+			case 1-> {
+				if(dao.addClient()>0)
+					System.out.println("Added a client Scucessfuly.....");
+				else
+					System.out.println("Adding client Failed, please try again");
+			}
+			case 2-> dao.getAllClient();
+			case 3-> dao.getClientbyID();
+			case 4-> dao.updateClient();
+			case 5-> dao.deleteClient();
 			case 6->System.exit(choice);
 			default -> System.out.println("Unexpected value: " + choice);
 		}
 	}
-
 }
