@@ -12,11 +12,10 @@ public class RemoveSpace {
 		
 		
 		StringBuffer str = new StringBuffer("ja va");
-		int l=str.length();
+		
 		for (int i = str.length() - 1; i >= 0; i--) {
-		    if (str.charAt(i) == ' ') {
+		    if (str.charAt(i) == ' ')
 		        str.deleteCharAt(i);
-		    }
 		}
 		System.out.println(str);
 	}
